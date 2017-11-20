@@ -1,4 +1,5 @@
 $(function() {
+    
 	$('#inscription').hide();
     $('#connectionbtn').click(function(){
     	console.log("coucou");

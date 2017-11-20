@@ -1,3 +1,11 @@
+@media screen and (max-width: 640px) {
+    .creerbtn {
+      display:none;
+    }
+  }
+
+
+
 @import "compass/css3";
 
 /***********************
@@ -7,6 +15,24 @@
  * {
      box-sizing: border-box;
  }
+
+ body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Sniglet', cursive;
+}
+h1{
+	font-weight: normal;
+	font-size: 4em;
+	font-family: 'Raleway', sans-serif;
+	margin: 0 auto;
+	margin-top: 30px;
+	width: 500px;
+	color: #F90;
+	text-align: center;
+
+}
 .flexsearch--wrapper {
 	height: auto;
 	width: auto;
@@ -48,7 +74,7 @@
 	border-width: 2px;
   color: #333;
   font-family: 'Helvetica', sans-serif;
-	font-size: 26px;
+	font-size: 30px;
 	-webkit-appearance: none;
 	-moz-appearance: none;
 }
@@ -121,10 +147,6 @@ button:hover {
     position: relative;
 }
 
-img.avatar {
-    width: 40%;
-    border-radius: 50%;
-}
 
 .container {
     padding: 16px;
@@ -190,16 +212,54 @@ span.psw {
     to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
-@media screen and (max-width: 300px) {
-    span.psw {
-       display: block;
-       float: none;
-    }
-    .cancelbtn {
-       width: 100%;
-    }
-}
+
 .validerbtn{
   float:right;
+}
+
+.input{
+	border: none;
+	border-radius: 20px;
+	outline: none;
+	padding: 10px;
+	font-family: 'Sniglet', cursive;
+	font-size: 1em;
+	color: #676767;
+	transition: border 0.5s;
+	-webkit-transition: border 0.5s;
+	-moz-transition: border 0.5s;
+	-o-transition: border 0.5s;
+	border: solid 3px #98d4f3;	
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	
+}
+.input:focus{
+	border: solid 3px #77bde0;	
+}
+
+label{
+	font-size: 1.5em;
+	margin-top: 20px;
+	padding-left: 20px;
+}
+
+
+.btnorange{
+	background-color: #F90;
+	color: white;
+	height: 10%;
+	cursor: pointer;
+	margin-top: 30px;
+	font-size: 1.29em;
+	font-family: 'Sniglet', cursive;
+	-webkit-transition: background-color 0.5s;
+	-moz-transition: background-color 0.5s;
+	-o-transition: background-color 0.5s;
+	transition: background-color 0.5s;
+}
+.btnorange:hover{
+	background-color: #e58f0e;
+	
 }
