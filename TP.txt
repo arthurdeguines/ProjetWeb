@@ -1,0 +1,26 @@
+					-------- PROJET ---------
+
+Authentification (Gestion utilisateur)
+Formulaire(s)
+Service Web
+Responsive
+
+
+
+
+
+
+/!\ Expliquer l'algorithme /!\
+/!\ Connection réseaux sociaux /!\
+
+Gestion user : 
+https://openclassrooms.com/courses/concevez-votre-site-web-avec-php-et-mysql/tp-creer-un-espace-membres
+
+
+Menu : 
+
+https://codyhouse.co/demo/bouncy-content-filter/index.html
+
+Enregistrer : 
+
+https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_signup_form_modal
