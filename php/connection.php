@@ -20,6 +20,8 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
             //on vérifie que la connexion s'effectue correctement:
             if(!$mysqli){
+                $_SESSION['erreur'] = 1;
+                header('Location: http://localhost/ProjetWeb/ProjetWeb/');
                 echo "Erreur de connexion à la base de données.";
             } else {
                 // on fait maintenant la requête dans la base de données pour rechercher si ces données existe et correspondent:
@@ -27,13 +29,16 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 // si il y a un résultat, mysqli_num_rows() nous donnera alors 1
                 // si mysqli_num_rows() retourne 0 c'est qu'il a trouvé aucun résultat
                 if(mysqli_num_rows($Requete) == 0) {
+                    $_SESSION['erreur'] = 2;
+                    header('Location: http://localhost/ProjetWeb/ProjetWeb/');
                     echo "Le pseudo ou le mot de passe est incorrect, le compte n'a pas été trouvé.";
                 } else {
-                                
                     // on ouvre la session avec $_SESSION:
                     $_SESSION['session'] = 1; // la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
-                    echo '<meta http-equiv="refresh" content="5; URL="http://localhost/ProjetWeb/ProjetWeb/">';
-                    
+                    $_SESSION['erreur'] = 0;
+                    echo 'Vous êtes connecté';
+                    header('Location: http://localhost/ProjetWeb/ProjetWeb/');
+                    exit();
                   
                 }
             }
