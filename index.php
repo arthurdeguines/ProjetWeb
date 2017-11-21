@@ -10,6 +10,7 @@
     <script src="js/jquery-3.2.1.js"></script>
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
+
   </head>
   <body>
     <?php session_start(); ?>
@@ -122,32 +123,32 @@
 
 <div id="creer">
   <h1> Créer </h1>
-  <form  method="post">
+  <form  method="post" action ='php/insertRecette.php'>
       
-    <div class="formgroup" id="name-form">
+    <div class="formgroup" >
         <label class ="disblock" for="name">Titre</label>
-        <input class ="disblock col-9 input" type="text" id="name" name="name" />
+        <input class ="disblock col-9 input" type="text" id="name" name="titre" />
     </div>
     
-    <div class="formgroup" id="email-form">
+    <div class="formgroup" >
         <label class ="disblock" for="email">Image</label>
-        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+        <input class ="disblock col-9 input" type="text" id="email" name="img" />
     </div>
-        <div class="formgroup" id="email-form">
+        <div class="formgroup" >
         <label class ="disblock" for="email">Temps Cuisson</label>
-        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+        <input class ="disblock col-9 input" type="text" id="email" name="temps" />
     </div>
 
         <div class="formgroup" id="email-form">
         <label class ="disblock" for="email">Difficulté</label>
-        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+        <input class ="disblock col-9 input" type="text" id="email" name="difficulte" />
     </div>
     <div class="formgroup" id="message-form">
         <label class ="disblock" for="message">Recette</label>
-        <textarea class ="disblock input col-9" id="message" name="message"></textarea>
+        <textarea class ="disblock input col-9" id="message" name="recette"></textarea>
     </div>
     
-      <input class ="disblock input btnorange" type="submit" value="Envoyer la recette!" />
+      <input class ="disblock input btnorange" type="submit" name="envoiRecette" value="Envoyer la recette!" />
     </form>
 </div>
 
@@ -156,7 +157,7 @@
 <div id="recette">
     <div class="row">
     <div class="col-3"></div>
-    <div class="col-8 btn-group" role="group" id="ButtonGroup" >
+    <div class="col-9 btn-group" role="group" id="ButtonGroup" >
 
       <button type= "button" class= "col-4 btn btn-light" id="IdeeJour">
       L'IDEE DU JOUR 
@@ -172,7 +173,7 @@
     </div>
 
 </div>
-  <br>
+ 
 
    <div class="row" id="Div_Filtre">
     <div class="col-3"></div>
@@ -182,12 +183,17 @@
       <option value="option-3"> Pertinence </option>
       <option value="option-4"> Visualisation </option>
     </select>
-
+    <div class="col-7"></div>
+  </div>
+  
   <h1> Recettes!</h1>
-<div class ="col-12">
+
+  <div class="row">
+
   <!--Affichage des recettes -->
 
   <?php 
+  require("php/fonctions.php");
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
                 $req = "Select * from recette";
@@ -195,9 +201,11 @@
 if ($res->num_rows > 0) {
     // output data of each row
     while($row = $res->fetch_assoc()) {
-        
-          echo "<h2>".$row["titre"]."</h2> <br>".nl2br($row["recette_text"]); //nl2br sert à mettre tout le text comme on l'a mis dans la bdd
-        
+          echo "<div class=\"recette col-6\">"; 
+          echo "<p class=\"temps_cuisson\">".$row["temps_cuisson"]." minutes</p>";
+          echo "<img src=\"".$row["url_img"]."\" class=\"img_recette\"/>";
+          echo "<h2>".$row["titre"]."</h2> <br>".troncText(nl2br($row["recette_text"])); //nl2br sert à mettre tout le text comme on l'a mis dans la bdd
+          echo "</div>";
       }
     }
  else {
@@ -206,13 +214,31 @@ if ($res->num_rows > 0) {
   ?>
 </div>
 
-</div>
+
 </div>
 
 
 <!-- Page Recette -->
 <div id="categorie">
   <h1> Categorie</h1>
+    <?php 
+    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
+    $req = "Select * from periode";
+    $res = $mysqli->query($req);
+if ($res->num_rows > 0) {
+    // output data of each row
+    while($row = $res->fetch_assoc()) {
+          echo "<div class=\"categorie col-12 containercategorie\">"; 
+          echo "<img src=\"".$row["img"]."\" class=\" image  \"/>";
+          echo "<div class=\" overlay text\">".$row["libelle"]."</div>";
+          echo "</div>";
+      }
+    }
+ else {
+    echo "0 results";
+}
+  ?>
 </div>
 
 

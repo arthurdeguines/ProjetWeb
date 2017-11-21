@@ -286,3 +286,68 @@ label{
 	position:relative;
 	top:1px;
 }
+.img_recette{
+	width: 250px;
+ 	height: auto;
+	max-width:100%;
+	max-height: 100%;
+	float:left;
+}
+.recette{
+	width:50%;
+	text-align: center;
+	border: 2px solid black;
+	border-radius: 5%;
+}
+.temps_cuisson{
+	float:right;
+}
+.img_categorie{
+	width:50%;
+	height: 50%;
+	float:left;
+}
+.categorie{
+	float: center;
+}
+
+
+.containercategorie {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 0;
+  height: 100%;
+  transition: .5s ease;
+}
+.containercategorie:hover .overlay {
+  width: 100%;
+}
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  text-align: center;
+  vertical-align: middle;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+

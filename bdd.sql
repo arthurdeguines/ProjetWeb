@@ -63,7 +63,8 @@ CREATE TABLE commentaire (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE periode (
   id int(11) NOT NULL,
-  libelle char(35)
+  libelle char(35),
+  img text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE quantite_ingredient (
   id_ingredient int,
@@ -132,11 +133,11 @@ INSERT INTO `utilisateur` (id , login , mdp ,email ,nom ,prenom ,id_role ) VALUE
 (null, 'julien', 'boireau', 'lolol@gmail.com', 'Boireau', 'Julien',1),
 (null, 'kevin', 'salomon', 'keke@gmail.com', 'Salomon', 'Kevin',1);
 
-  INSERT INTO `periode` ( id , libelle)  VALUES
-(1,'Noel'),
-(2, 'Epiphanie'),
-(3, 'La chandeleur'),
-(4, 'Estival');
+  INSERT INTO `periode` ( id , libelle,img)  VALUES
+(1,'Noel','http://images.cuisineaz.com/externe/images/dossiers/noel-2016/7-Parties-Tradition_03Plats.jpg'),
+(2, 'Epiphanie','http://static.750g.com/images/622-auto/62113d2daf49f921db058177e35394ec/epiphanie.png' ),
+(3, 'La chandeleur','http://www.minceurmoinscher.com/ori-crepe-hyperproteinee-au-chocolat-91.jpg'),
+(4, 'Estival','https://archzine.fr/wp-content/uploads/2016/03/plat-d%C3%A9t%C3%A9-idee-repas-soir-recette-facile-pour-le-soir-3.jpg');
 
   INSERT INTO `type` ( id , libelle)  VALUES
 (1,'Entree'),
@@ -146,7 +147,6 @@ INSERT INTO `utilisateur` (id , login , mdp ,email ,nom ,prenom ,id_role ) VALUE
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_periode,id_type,recette_text)  VALUES
 (null,'https://image.afcdn.com/recipe/20170213/63346_w420h344c1cx3000cy2000.jpg','Tarte citron','2017-11-11',55,0,3,1,1,3,'Etape 1
 On commence par la pâte sablée : mettre le four à préchauffer à 180°C (thermostat 6).
-
 On sépare les blancs des jaunes d\'oeufs.
 Etape 2
 Fouetter les jaunes d\'oeuf avec le sucre et 2 cuillères d\'eau pour faire mousser.
