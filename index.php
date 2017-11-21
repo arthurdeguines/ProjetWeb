@@ -149,13 +149,25 @@
       <option value="option-4"> Visualisation </option>
     </select>
 
-
-
-
-    
-
-
   <h1> Recettes!</h1>
+  <?php 
+
+    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+
+                $req = "Select * from recette";
+                $res = $mysqli->query($req);
+if ($res->num_rows > 0) {
+    // output data of each row
+    while($row = $res->fetch_assoc()) {
+        for($i = 0; $i<=1;$i++){
+          echo $row["titre"]."<br>".$row["recette_text"];
+        }
+      }
+    }
+ else {
+    echo "0 results";
+}
+  ?>
 </div>
 </div>
 
