@@ -11,6 +11,7 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
     $MotDePasse2 = htmlentities($_POST['inscription_password2'], ENT_QUOTES, "ISO-8859-1");
     $Email = htmlentities($_POST['inscription_email'], ENT_QUOTES, "ISO-8859-1");
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+    $veriflog = mysqli_query($mysqli,"SELECT login FROM utilisateur WHERE login = '".$Pseudo."';");
     echo"lol1";  
     if ($MotDePasse != $MotDePasse2) {
         $_SESSION['erreur'] = 3;
@@ -24,7 +25,8 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
         echo "Erreur de connexion à la base de données.";
         } 
         
-    elseif ((mysqli_query($mysqli,"SELECT login FROM utilisateur WHERE login = '".$Pseudo."';")!== null)){
+    elseif ($veriflog == null){
+        echo $veriflog;
         $_SESSION['erreur'] = 4;
         header('Location: http://localhost/ProjetWeb/ProjetWeb/'); 
     
@@ -32,7 +34,7 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
     else {
                 $req = "INSERT INTO utilisateur (id, login, mdp, email, nom, prenom, id_role ) VALUES 
                 (null, '$Pseudo' , '$MotDePasse' , '$Email' , null, null, 1  );";
-                $res = $conn->query($req);
+                $res = $mysqli->query($req);
                 $_SESSION['erreur'] = 0;
                 header('Location: http://localhost/ProjetWeb/ProjetWeb/');
                 
