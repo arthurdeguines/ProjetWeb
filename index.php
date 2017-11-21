@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/onglets.js"></script>
   </head>
   <body>
+    <?php session_start(); ?>
     <br>
     <div class="container">
       <div class="row">
@@ -21,13 +22,14 @@
                 <input class="flexsearch--input" type="search" placeholder="search">
                 <input class="flexsearch--submit" type="submit" value="&#10140;"/>
             </div>   
-        </form>        
-        <?php
-        // le code PHP ---------
-        $heure = date("H\hi");
-        print("<font size=\"2\" face=\"Arial\"> et celui en PHP.</font>");
-        ?>
-        <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>
+        </form>     
+           
+        <?php if ( $_SESSION['pseudo'] != null): ?>
+            <button class = "col-lg-2 btn btn-light" style="width:auto;"><img class ="col-4" src="2.png"></button>
+        <?php else: ?> 
+            <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>
+        <?php endif; ?>
+        
         </div>
         <div id="id01" class="modal">
           <div class="modal-content animate" >

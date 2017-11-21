@@ -11,6 +11,7 @@
 /***********************
  * Essential Structure *
  ***********************/
+ 
 
  * {
      box-sizing: border-box;
@@ -262,4 +263,26 @@ label{
 .btnorange:hover{
 	background-color: #e58f0e;
 	
+}
+
+.decobtn {
+	background-color:transparent;
+	-moz-border-radius:42px;
+	-webkit-border-radius:42px;
+	border-radius:42px;
+	border:2px solid #ff6633;
+	display:inline-block;
+	cursor:pointer;
+	color:#ff6633;
+	font-family:Arial;
+	font-size:18px;
+	padding:15px 31px;
+	text-decoration:none;
+}
+.decobtn:hover {
+	background-color:transparent;
+}
+.decobtn:active {
+	position:relative;
+	top:1px;
 }
