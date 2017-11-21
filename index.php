@@ -24,7 +24,7 @@
             </div>   
         </form>     
            
-        <?php if ( $_SESSION['pseudo'] != null): ?>
+        <?php if ( isset ($_SESSION['session'])): ?>
             <button class = "col-lg-2 btn btn-light" style="width:auto;"><img class ="col-4" src="2.png"></button>
         <?php else: ?> 
             <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>

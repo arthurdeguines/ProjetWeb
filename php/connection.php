@@ -29,9 +29,12 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 if(mysqli_num_rows($Requete) == 0) {
                     echo "Le pseudo ou le mot de passe est incorrect, le compte n'a pas été trouvé.";
                 } else {
+                                
                     // on ouvre la session avec $_SESSION:
-                    $_SESSION['pseudo'] = $Pseudo; // la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
-                    echo "Vous êtes à présent connecté !";
+                    $_SESSION['session'] = 1; // la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
+                    echo '<meta http-equiv="refresh" content="5; URL="http://localhost/ProjetWeb/ProjetWeb/">';
+                    
+                  
                 }
             }
         }
