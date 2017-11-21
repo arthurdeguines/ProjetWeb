@@ -120,8 +120,46 @@
 	<h1> Créer </h1>
 </div>
 <div id="recette">
-	<h1> Recettes!</h1>
+	  <div class="row">
+    <div class="col-3"></div>
+    <div class="col-8 btn-group" role="group" id="ButtonGroup" >
+
+      <button type= "button" class= "col-4 btn btn-light" id="IdeeJour">
+      L'IDEE DU JOUR 
+      </button>
+
+      <button type= "button" class= "col-4 btn btn-light" id="Filtre">
+      LES RECETTES
+      </button>
+
+      
+      
+
+    </div>
+
 </div>
+  <br>
+
+   <div class="row" id="Div_Filtre">
+    <div class="col-3"></div>
+    <select class="col-2 form-control">
+      <option value="option-1"> Type </option>
+      <option value="option-2"> Occasions Particulières </option>
+      <option value="option-3"> Pertinence </option>
+      <option value="option-4"> Visualisation </option>
+    </select>
+
+
+
+
+    
+
+
+  <h1> Recettes!</h1>
+</div>
+</div>
+
+
 <div id="categorie">
 	<h1> Categorie</h1>
 </div>
