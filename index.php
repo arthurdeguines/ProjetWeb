@@ -79,6 +79,7 @@
   
       </div>
 
+<!--Gestion des erreurs de connection/ inscription -->
     <br>
       
 <?php if (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 1): ?>
@@ -98,6 +99,9 @@
         <div class= "alert alert-danger col-12" role ="alert"> Pseudo déjà utilisé. </div>
             
 <?php endif; ?>
+
+
+<!-- Onglets -->
 <br>
         <nav class="col-12">
           <button type="button" display="hide" class="col-3 btn btn-light" id="creerbtn">Créer
@@ -114,11 +118,41 @@
 
 </div>
 
-
+<!-- Page Créer une recette -->
 
 <div id="creer">
 	<h1> Créer </h1>
+  <form  method="post">
+      
+    <div class="formgroup" id="name-form">
+        <label class ="disblock" for="name">Titre</label>
+        <input class ="disblock col-9 input" type="text" id="name" name="name" />
+    </div>
+    
+    <div class="formgroup" id="email-form">
+        <label class ="disblock" for="email">Image</label>
+        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+    </div>
+        <div class="formgroup" id="email-form">
+        <label class ="disblock" for="email">Temps Cuisson</label>
+        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+    </div>
+
+        <div class="formgroup" id="email-form">
+        <label class ="disblock" for="email">Difficulté</label>
+        <input class ="disblock col-9 input" type="email" id="email" name="email" />
+    </div>
+    <div class="formgroup" id="message-form">
+        <label class ="disblock" for="message">Recette</label>
+        <textarea class ="disblock input col-9" id="message" name="message"></textarea>
+    </div>
+    
+      <input class ="disblock input btnorange" type="submit" value="Envoyer la recette!" />
+    </form>
 </div>
+
+<!-- Page Recette -->
+
 <div id="recette">
 	  <div class="row">
     <div class="col-3"></div>
@@ -150,6 +184,9 @@
     </select>
 
   <h1> Recettes!</h1>
+<div class ="col-12">
+  <!--Affichage des recettes -->
+
   <?php 
 
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
@@ -159,9 +196,9 @@
 if ($res->num_rows > 0) {
     // output data of each row
     while($row = $res->fetch_assoc()) {
-        for($i = 0; $i<=1;$i++){
-          echo $row["titre"]."<br>".$row["recette_text"];
-        }
+        
+          echo "<h2>".$row["titre"]."</h2> <br>".$row["recette_text"];
+        
       }
     }
  else {
@@ -169,19 +206,26 @@ if ($res->num_rows > 0) {
 }
   ?>
 </div>
+
+</div>
 </div>
 
 
+<!-- Page Recette -->
 <div id="categorie">
 	<h1> Categorie</h1>
 </div>
+
+
+<!-- Page Contact -->
+
 <div id="contact">
 	<div class ="col-12" id="cform">
     
     <div class="fruit" id="fruit"></div>
     <div class="fruit" id="fruit2"></div>
     
-    <form id="contactform" method="post">
+    <form id="contactform" method="post" id="connection" action ='php/envoiMail.php' >
     
     <div class="formgroup" id="name-form">
         <label class ="disblock" for="name">Votre nom*</label>
@@ -198,7 +242,7 @@ if ($res->num_rows > 0) {
         <textarea class ="disblock input col-9" id="message" name="message"></textarea>
     </div>
     
-      <input class ="disblock input btnorange" type="submit" value="Envoyer votre message!" />
+      <input class ="disblock input btnorange" type="submit" value="Envoyer votre message!"  />
     </form>
     </div>
 </div>
