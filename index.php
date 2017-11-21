@@ -196,7 +196,7 @@ if ($res->num_rows > 0) {
     // output data of each row
     while($row = $res->fetch_assoc()) {
         
-          echo "<h2>".$row["titre"]."</h2> <br>".$row["recette_text"];
+          echo "<h2>".$row["titre"]."</h2> <br>".nl2br($row["recette_text"]); //nl2br sert à mettre tout le text comme on l'a mis dans la bdd
         
       }
     }
