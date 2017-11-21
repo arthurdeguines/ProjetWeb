@@ -37,11 +37,11 @@ CREATE TABLE recette (
   date_creation date,
   temps_cuisson int,
   status int,
-  recette_text text,
   difficulte int(1),
   id_utilisateur int,
   id_periode int,
-  id_type int
+  id_type int,
+  recette_text text
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE role (
   id int(11) NOT NULL,
@@ -143,8 +143,8 @@ INSERT INTO `utilisateur` (id , login , mdp ,email ,nom ,prenom ,id_role ) VALUE
 (2, 'Plat'),
 (3, 'Dessert');
 
-INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,recette_text,difficulte,id_utilisateur,id_periode,id_type)  VALUES
-(null,'https://image.afcdn.com/recipe/20170213/63346_w420h344c1cx3000cy2000.jpg','Tarte citron','2017-11-11',55,0,'Etape 1
+INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_periode,id_type,recette_text)  VALUES
+(null,'https://image.afcdn.com/recipe/20170213/63346_w420h344c1cx3000cy2000.jpg','Tarte citron','2017-11-11',55,0,3,1,1,3,'Etape 1
 On commence par la pâte sablée : mettre le four à préchauffer à 180°C (thermostat 6).
 
 On sépare les blancs des jaunes d\'oeufs.
@@ -197,14 +197,14 @@ puis enfourner la tarte à 120°C/150°C jusqu’à ce que la meringue dore (env
 Etape 23
 Déguster
 Etape 24
-Une part ?',3,1,1,3);
+Une part ?');
 
-INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,recette_text,difficulte,id_utilisateur,id_periode,id_type)  VALUES
-(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,1,'1
+INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_periode,id_type,recette_text)  VALUES
+(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,1,4,2,3,1,'1
 Egouttez le crabe. Ouvrez une boîte vide des deux côtés afin de disposer d\'un cercle de 8 cm de diamètre. A l\'aide de ce cercle, découpez deux ronds dans chaque tranche de saumon.
 2
 Récupérez les chutes et hachez-les. Pelez et hachez finement les échalotes. Ciselez les fines herbes.
 3
 Effilochez la chair de crabe en éliminant les cartilages. Incorporez-lui le saumon haché, les échalotes, les fines herbes et l\'huile. Poivrez.
 Pour finir
-Pour monter les millefeuilles, déposez un rond de saumon au centre des assiettes, posez la boîte évidée dessus, garnissez de crabe puis d\'un autre rond de saumon. Recommencez deux fois. Retirez délicatement la boîte. Gardez au réfrigérateur et servez frais.',4,2,3,1);
+Pour monter les millefeuilles, déposez un rond de saumon au centre des assiettes, posez la boîte évidée dessus, garnissez de crabe puis d\'un autre rond de saumon. Recommencez deux fois. Retirez délicatement la boîte. Gardez au réfrigérateur et servez frais.');

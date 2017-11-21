@@ -12,6 +12,7 @@
     <script type="text/javascript" src="js/onglets.js"></script>
   </head>
   <body>
+    <?php session_start(); ?>
     <br>
     <div class="container">
       <div class="row">
@@ -21,13 +22,16 @@
                 <input class="flexsearch--input" type="search" placeholder="search">
                 <input class="flexsearch--submit" type="submit" value="&#10140;"/>
             </div>   
-        </form>        
-        <?php
-        // le code PHP ---------
-        $heure = date("H\hi");
-        print("<font size=\"2\" face=\"Arial\"> et celui en PHP.</font>");
-        ?>
-        <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>
+        </form>     
+           
+        <?php if ( isset ($_SESSION['session'])): ?>
+            <form method="post" class ="col-2" action ='php/deco.php' >
+                <input type="submit" value="Déconnection" class = "btn btn-light" ></input>
+            </form>
+        <?php else: ?> 
+            <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>
+        <?php endif; ?>
+        
         </div>
         <div id="id01" class="modal">
           <div class="modal-content animate" >
@@ -53,19 +57,19 @@
               
             </form>
 
-            <form id = "inscription">
+            <form id = "inscription" method="post" action ='php/inscription.php'>
             	<label><b>Login</b></label>
-              <input  class ="input" type="text" placeholder="Enter Username" name="uname" required>
+              <input  class ="input" type="text" placeholder="Enter Username" name="inscription_login" required>
 
               <label><b>Email</b></label>
-              <input class ="input" type="text" placeholder="Enter Username" name="uname" required>
+              <input class ="input" type="text" placeholder="Enter Username" name="inscription_email" required>
         
               <label><b>Mot de passe</b></label>
-              <input class ="input" type="password" placeholder="Enter Password" name="psw" required>
+              <input class ="input" type="password" placeholder="Enter Password" name="inscription_password" required>
 
               <label><b>Retapez le mot de passe</b></label>
-              <input  class ="input" type="password" placeholder="Enter Password" name="psw" required><br><br><br>
-              <button class ="btn btn-success validerbtn col-2" type="submit">Valider</button>
+              <input  class ="input" type="password" placeholder="Enter Password" name="inscription_password2" required><br><br><br>
+              <button name="inscription" value="inscription" class ="btn btn-success validerbtn col-2" type="submit">Valider</button>
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger col-2">Annuler</button><br>
               <span class="col-2"> <a href="#">Mot de passe oublié?</a></span>
             </form>
@@ -77,6 +81,24 @@
 
     <br>
       
+<?php if (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 1): ?>
+            
+        <div class= "alert alert- col-12" role ="alert"> Erreur de connexion à la base de données. </div>
+
+<?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 2): ?> 
+
+        <div class= "alert alert-danger col-12" role ="alert"> Le pseudo ou le mot de passe est incorrect, le compte n'a pas été trouvé. </div>
+
+<?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 3): ?> 
+
+        <div class= "alert alert-danger col-12" role ="alert"> Les mots de passe sont differents. </div>
+
+<?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 4): ?> 
+
+        <div class= "alert alert-danger col-12" role ="alert"> Pseudo déjà utilisé. </div>
+            
+<?php endif; ?>
+<br>
         <nav class="col-12">
           <button type="button" display="hide" class="col-3 btn btn-light" id="creerbtn">Créer
             <img id ="img1" class ="col-3" src="1.png" style = "display :none"> 
@@ -92,60 +114,17 @@
 
 </div>
 
+
+
 <div id="creer">
 	<h1> Créer </h1>
 </div>
-<br>
 <div id="recette">
-  <div class="row">
-    <div class="col-3"></div>
-    <div class="col-8 btn-group" role="group" id="ButtonGroup" >
-
-      <button type= "button" class= "col-4 btn btn-light" id="IdeeJour">
-      L'IDEE DU JOUR 
-      </button>
-
-      <button type= "button" class= "col-4 btn btn-light" id="Filtre">
-      LES RECETTES
-      </button>
-
-      
-      
-
-    </div>
-
-
-
-  </div>
- 
-
-  <br>
-
-   <div class="row" id="Div_Filtre">
-    <div class="col-3"></div>
-    <select class="col-2 form-control">
-      <option value="option-1"> Type </option>
-      <option value="option-2"> Occasions Particulières </option>
-      <option value="option-3"> Pertinence </option>
-      <option value="option-4"> Visualisation </option>
-    </select>
-
-
-
-
-    
-
-
 	<h1> Recettes!</h1>
 </div>
-
-
 <div id="categorie">
 	<h1> Categorie</h1>
 </div>
-
-
-
 <div id="contact">
 	<div class ="col-12" id="cform">
     
