@@ -58,7 +58,7 @@
             </form>
 
             <form id = "inscription" method="post" action ='php/inscription.php'>
-            	<label><b>Login</b></label>
+              <label><b>Login</b></label>
               <input  class ="input" type="text" placeholder="Enter Username" name="inscription_login" required>
 
               <label><b>Email</b></label>
@@ -121,7 +121,7 @@
 <!-- Page Créer une recette -->
 
 <div id="creer">
-	<h1> Créer </h1>
+  <h1> Créer </h1>
   <form  method="post">
       
     <div class="formgroup" id="name-form">
@@ -154,7 +154,7 @@
 <!-- Page Recette -->
 
 <div id="recette">
-	  <div class="row">
+    <div class="row">
     <div class="col-3"></div>
     <div class="col-8 btn-group" role="group" id="ButtonGroup" >
 
@@ -188,9 +188,8 @@
   <!--Affichage des recettes -->
 
   <?php 
-
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
-
+    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
                 $req = "Select * from recette";
                 $res = $mysqli->query($req);
 if ($res->num_rows > 0) {
@@ -213,14 +212,14 @@ if ($res->num_rows > 0) {
 
 <!-- Page Recette -->
 <div id="categorie">
-	<h1> Categorie</h1>
+  <h1> Categorie</h1>
 </div>
 
 
 <!-- Page Contact -->
 
 <div id="contact">
-	<div class ="col-12" id="cform">
+  <div class ="col-12" id="cform">
     
     <div class="fruit" id="fruit"></div>
     <div class="fruit" id="fruit2"></div>
@@ -256,9 +255,7 @@ if ($res->num_rows > 0) {
                     modal.style.display = "none";
                 }
             }
-
             var modal2 = document.getElementById('id02');
-
             // When the user clicks anywhere outside of the modal, close it
             window.onclick = function(event) {
                 if (event.target == modal2) {
