@@ -11,7 +11,7 @@
 /***********************
  * Essential Structure *
  ***********************/
- 
+
 
  * {
      box-sizing: border-box;
@@ -314,6 +314,7 @@ label{
 
 .containercategorie {
   position: relative;
+  float: left;
   width: 50%;
 }
 #loginfb{

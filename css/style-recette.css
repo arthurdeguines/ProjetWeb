@@ -57,6 +57,7 @@ Primary style
 Modules - reusable parts of our design
 
 -------------------------------- */
+
 .cd-container {
   /* this class is used to give a max-width to the element it is applied to, and center it horizontally when it reaches that max-width */
   width: 90%;
@@ -129,10 +130,10 @@ Main components
     margin: 0 4% 2.8em 0;
   }
   .cd-item:nth-child(2n) {
-    margin-right: 4%;
+    margin-right: 2%;
   }
   .cd-item:nth-child(4n) {
-    margin-right: 0;
+    margin-right: 2%;
   }
   .cd-item.empty-box::after {
     /* box visible as placeholder when the .cd-quick-view zooms in */

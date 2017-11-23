@@ -2,8 +2,12 @@
 <html>
   <head>
     <meta charset="UTF-8">        
+
+    <link href="css/reset-recette.css" rel="stylesheet">
+
+    <link href="css/style-recette.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen and (max-width: 640px)" href="styles.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/styles.css" type="text/css" />
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/style_contacts.css" rel="stylesheet">
     <script src="js/modernizr.js"></script> 
@@ -22,8 +26,6 @@
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
     
-    <link href="css/style-recette.css" rel="stylesheet">
-    <link href="css/reset-recette.css" rel="stylesheet">
 
   </head>
   <body>
@@ -49,13 +51,13 @@
         <?php endif; ?>
         
         </div>
+      </div>
         <div id="id01" class="modal">
           <div class="modal-content animate" >
             
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
-
             <div class="container">
 
                 <button class="btn btn-light" id="connectionbtn">Connection</button>
@@ -99,8 +101,7 @@
         </div>
 
         </div>
-  
-      </div>
+    </div>
 
 <!--Gestion des erreurs de connection/ inscription -->
     <br>
@@ -139,7 +140,6 @@
        
     
 
-</div>
 
 <!-- Page Créer une recette -->
 
@@ -190,19 +190,21 @@
       LES RECETTES
       </button>
 
-
       <div class="btn-group" role="group">
         <button class="btn btn-warning dropdown-toggle" role="group" type="button" id="droptype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display : none">
         Type
         </button>
+       
         <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
-          <button class="dropdown-item" type="button"> Tout </button>
-          <button class="dropdown-item" type="button"> Entrée </button>
-          <button class="dropdown-item" type="button"> Plat </button>
-          <button class="dropdown-item" type="button"> Dessert </button>
+             <form method="post" action ='php/recherche.php' >
+          <input type="submit" value="Tout" class="dropdown-item" type="button"  name="tout"/> 
+          <input type="submit" value="Entrée" class="dropdown-item" type="button"  name="entree"/> 
+          <input type="submit" value="Plat" class="dropdown-item" type="button"  name="plat"/> 
+          <input type="submit" value="Dessert" class="dropdown-item" type="button"  name="dessert"/> 
+        </form>
         </div>
-      </div>
 
+      </div>
 
       <div class="btn-group" role="group">
         <button class="btn btn-warning dropdown-toggle" role="group" type="button" id="dropfiltre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display : none">
@@ -269,9 +271,7 @@ if ($res->num_rows > 0) {
     echo "0 results";
 }
   ?>
-  <?php
-require('somefile.php');
-?>
+
 </div>
 
 
@@ -279,7 +279,6 @@ require('somefile.php');
 
 <div id="contact">
   <div class ="col-12" id="cform">
-    
     <div class="fruit" id="fruit"></div>
     <div class="fruit" id="fruit2"></div>
     

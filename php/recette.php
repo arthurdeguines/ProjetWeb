@@ -6,19 +6,17 @@
   require("php/fonctions.php");
   $recette = "";
 
-    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,10";
+    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,12";
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {
         // output data of each row
-          echo "<div id =\"recettebody\">";         
+          echo "<div id =\"recettebody\" ";         
           echo "<ul class=\"cd-items cd-container\">"; 
               while($row = $res->fetch_assoc()) {
-                     echo "lol";     
               echo "<li class=\"cd-item\">";
               echo "<img src=\"".$row["url_img"]."\" class=\" recetteimg  \" alt=\"".$row["id"]."\"/>";
               echo "<button onclick=\"showRecette(".$row["id"].")\" href=#\"?id=".$row["id"]."\" class=\"cd-trigger titre\">".$row["titre"]."</button>";
               echo "</li>";
-              echo "</ul>";
               echo "<div class=\"div".$row["id"]." divlol\">";
               echo "<div class=\"cd-quick-view\">";
                 echo "<div class=\"cd-slider-wrapper\">";
@@ -38,14 +36,15 @@
                 
             echo "</div>";
             echo "</div>";
-            echo "</div>";
-            echo "</div>"; 
             
             echo "
             <script type=\"text/javascript\">
             </script>
         ";
             }
+            echo "</ul>";
+            echo "</div>";
+
               
               }
              
