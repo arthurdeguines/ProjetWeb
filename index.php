@@ -9,10 +9,15 @@
     <script src="js/modernizr.js"></script> 
     <script src="js/contacts_js.js"></script>    
     <script src="js/jquery-3.2.1.js"></script>
+
     <script src="js/velocity.min.js"></script>
     
     <script src="js/showrecette.js"></script>
     <script src="js/main-recette.js"></script>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
     
@@ -163,36 +168,60 @@
 <!-- Page Recette -->
 
 <div id="recette">
-    <div class="row">
-    <div class="col-3"></div>
-    <div class="col-9 btn-group" role="group" id="ButtonGroup" >
 
-      <button type= "button" class= "col-4 btn btn-light" id="IdeeJour">
+    <div class="row">
+    <div class="col-4"></div>
+    <div class="col-6 btn-group" role="group" id="ButtonGroup" >
+
+      <button type= "button" class= "col-2 btn btn-light" id="IdeeJour">
       L'IDEE DU JOUR 
       </button>
 
-      <button type= "button" class= "col-4 btn btn-light" id="Filtre">
+      <button type= "button" class= "col-2 btn btn-light" id="Filtre">
       LES RECETTES
       </button>
 
-      
-      
 
+      <div class="btn-group" role="group">
+        <button class="btn btn-warning dropdown-toggle" role="group" type="button" id="droptype" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display : none">
+        Type
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button"> Tout </button>
+          <button class="dropdown-item" type="button"> Entrée </button>
+          <button class="dropdown-item" type="button"> Plat </button>
+          <button class="dropdown-item" type="button"> Dessert </button>
+        </div>
+      </div>
+
+
+      <div class="btn-group" role="group">
+        <button class="btn btn-warning dropdown-toggle" role="group" type="button" id="dropfiltre" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="display : none">
+        Filtre
+        </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+          <button class="dropdown-item" type="button"> Pertinence </button>
+          <button class="dropdown-item" type="button"> Vues </button>
+          <button class="dropdown-item" type="button"> Date Création </button>
+        </div>
+      </div>
+
+  
     </div>
+
+    <!-- <button class="col-2 btn btn-light dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    Filtres
+      </button>
+      <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <button class="dropdown-item" type="button">Pertinence</button>
+        <button class="dropdown-item" type="button">Visualisation</button>
+        <button class="dropdown-item" type="button">ordre </button>
+      </div> -->
 
 </div>
  
 
-   <div class="row" id="Div_Filtre">
-    <div class="col-3"></div>
-    <select class="col-2 form-control">
-      <option value="option-1"> Type </option>
-      <option value="option-2"> Occasions Particulières </option>
-      <option value="option-3"> Pertinence </option>
-      <option value="option-4"> Visualisation </option>
-    </select>
-    <div class="col-7"></div>
-  </div>
+   
   
   <h1> Recettes!</h1>
 
