@@ -6,10 +6,18 @@
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="styles.css" type="text/css" />
     <link href="css/styles.css" rel="stylesheet">
     <link href="css/style_contacts.css" rel="stylesheet">
+    <script src="js/modernizr.js"></script> 
     <script src="js/contacts_js.js"></script>    
     <script src="js/jquery-3.2.1.js"></script>
+    <script src="js/velocity.min.js"></script>
+    
+    <script src="js/showrecette.js"></script>
+    <script src="js/main-recette.js"></script>
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
+    
+    <link href="css/style-recette.css" rel="stylesheet">
+    <link href="css/reset-recette.css" rel="stylesheet">
 
   </head>
   <body>
