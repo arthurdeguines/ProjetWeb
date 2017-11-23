@@ -4,7 +4,7 @@
   $recette = "";
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
-                $req = "Select * from recette LIMIT 0,10";
+                $req = "Select * from recette where tri <> 0 order by tri DESC  LIMIT 0,10";
                 $res = $mysqli->query($req);
 if ($res->num_rows > 0) {
     // output data of each row
