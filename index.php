@@ -18,10 +18,10 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2">Logo</div>
-        <form class=" col-lg-8 flexsearch--form" action="#" method="post">
+        <form class=" col-lg-8 flexsearch--form" method="post" action ='php/recherche.php'>
             <div class="col-lg-12 flexsearch--input-wrapper">
-                <input class="flexsearch--input" type="search" placeholder="search">
-                <input class="flexsearch--submit" type="submit" value="&#10140;"/>
+                <input class="flexsearch--input" type="search" placeholder="search" name="search">
+                <input class="flexsearch--submit" type="submit" value="&#10140;" name="rechercher" />
             </div>   
         </form>     
            
