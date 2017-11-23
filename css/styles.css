@@ -328,7 +328,7 @@ label{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: #008CBA;
+  background-color: rgba(253, 142, 14, 0.5);
   overflow: hidden;
   width: 0;
   height: 100%;

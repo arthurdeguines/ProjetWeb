@@ -2,7 +2,10 @@ $(function() {
 	$('#creer').hide();
     $('#categorie').hide();
     $('#contact').hide();
-    $('#Div_Filtre').hide();
+    
+
+    
+    
 
     $('#creerbtn').click(function(){
 
@@ -19,15 +22,19 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-4 btn btn-light');
-        $('#Filtre').addClass('col-4 btn btn-light');
+        $('#IdeeJour').addClass('col-2 btn btn-light');
+        $('#Filtre').addClass('col-2 btn btn-light');
 
         $('#creer').show();
         $('#categorie').hide();
         $('#contact').hide();
         $('#recette').hide();
 
-        $('#Div_Filtre').hide();
+        $('#droptype').hide();
+        $('#dropfiltre').hide();
+
+        $('#Filtre').text('LES RECETTES');
+        $('#IdeeJour').text('L\'IDEE DU JOUR');
 
     });
     $('#categoriebtn').click(function(){
@@ -45,15 +52,20 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-4 btn btn-light');
-        $('#Filtre').addClass('col-4 btn btn-light');
+        $('#IdeeJour').addClass('col-2 btn btn-light');
+        $('#Filtre').addClass('col-2 btn btn-light');
 
         $('#creer').hide();
         $('#categorie').show();
         $('#contact').hide();
         $('#recette').hide();
 
-        $('#Div_Filtre').hide();
+        $('#droptype').hide();
+        $('#dropfiltre').hide();
+
+        $('#Filtre').text('LES RECETTES');
+        $('#IdeeJour').text('L\'IDEE DU JOUR');
+
 
     });
     $('#contactbtn').click(function(){
@@ -71,16 +83,19 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-4 btn btn-light');
-        $('#Filtre').addClass('col-4 btn btn-light');
+        $('#IdeeJour').addClass('col-2 btn btn-light');
+        $('#Filtre').addClass('col-2 btn btn-light');
 
         $('#creer').hide();
         $('#categorie').hide();
         $('#contact').show();
         $('#recette').hide();
 
-        $('#Div_Filtre').hide();
+        $('#droptype').hide();
+        $('#dropfiltre').hide();
 
+        $('#Filtre').text('LES RECETTES');
+        $('#IdeeJour').text('L\'IDEE DU JOUR');
     });
     $('#recettebtn').click(function(){
 
@@ -99,7 +114,11 @@ $(function() {
         $('#contact').hide();
         $('#recette').show();
 
-        $('#Div_Filtre').hide();
+        $('#droptype').hide();
+        $('#dropfiltre').hide();
+
+        $('#Filtre').text('LES RECETTES');
+        $('#IdeeJour').text('L\'IDEE DU JOUR');
 
     });
 
@@ -108,10 +127,12 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-6 btn btn-warning');
-        $('#Filtre').addClass('col-2 btn btn-light');
+        $('#IdeeJour').addClass('col-4 btn btn-warning').text('L\'IDEE DU JOUR');
+        $('#Filtre').addClass('btn btn-light').html('<img src="assiette.png" width="25" height="25" id="lg_recette"/>');
 
-        $('#Div_Filtre').hide();
+        $('#droptype').hide();
+        $('#dropfiltre').hide();
+        
     });
 
     $('#Filtre').click(function() {
@@ -119,8 +140,15 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-2 btn btn-light');
-        $('#Filtre').addClass('col-6 btn btn-warning');
+        $('#IdeeJour').addClass('btn btn-light').html('<img src="idée.png" width="25" height="25" id="lg_idee"/>');
+        $('#Filtre').addClass('col-4 btn btn-warning').text('LES RECETTES');
+
+        $('#droptype').show();
+        $('#dropfiltre').show();
+
+        
+
+
 
         $('#Div_Filtre').show();
     });
