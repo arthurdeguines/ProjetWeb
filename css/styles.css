@@ -316,7 +316,12 @@ label{
   position: relative;
   width: 50%;
 }
-
+#loginfb{
+	width: 300px;
+	text-align: right;
+	float : right;
+	background-color: blue;
+}
 .image {
   display: block;
   width: 100%;

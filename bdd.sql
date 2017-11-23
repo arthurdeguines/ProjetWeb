@@ -42,7 +42,7 @@ CREATE TABLE recette (
   id_periode int,
   id_type int,
   recette_text text,
-  tri decimal DEFAULT 0
+  tri decimal DEFAULT 1
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 CREATE TABLE role (
   id int(11) NOT NULL,

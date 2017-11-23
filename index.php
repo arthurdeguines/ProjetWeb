@@ -14,6 +14,7 @@
     
     <script src="js/showrecette.js"></script>
     <script src="js/main-recette.js"></script>
+    <script src="js/facebook.js"></script>
 
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
@@ -26,6 +27,7 @@
 
   </head>
   <body>
+
     <?php session_start(); ?>
     <br>
     <div class="container">
@@ -53,14 +55,19 @@
             <div class="imgcontainer">
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
-        
+
             <div class="container">
 
                 <button class="btn btn-light" id="connectionbtn">Connection</button>
                 <button class="btn btn-light" id="enregistrerbtn">Enregistrer</button>
                 <br>
-        
-            <form id="connection" method="post" action ='php/connection.php' >
+
+                
+                  <!-- FAcebook -->
+<div id="connection">
+
+            <form method="post" action ='php/connection.php' >
+
               <label><b>Login</b></label>
               <input  class ="input" type="text" placeholder="Enter Username" name="pseudo" required>
               <label><b>Mot de passe</b></label>
@@ -70,8 +77,9 @@
               <span class="col-2"> <a href="#">Mot de passe oublié?</a></span>
               
             </form>
-
+          </div>
             <form id = "inscription" method="post" action ='php/inscription.php'>
+
               <label><b>Login</b></label>
               <input  class ="input" type="text" placeholder="Enter Username" name="inscription_login" required>
 
@@ -83,6 +91,7 @@
 
               <label><b>Retapez le mot de passe</b></label>
               <input  class ="input" type="password" placeholder="Enter Password" name="inscription_password2" required><br><br><br>
+
               <button name="inscription" value="inscription" class ="btn btn-success validerbtn col-2" type="submit">Valider</button>
               <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger col-2">Annuler</button><br>
               <span class="col-2"> <a href="#">Mot de passe oublié?</a></span>
