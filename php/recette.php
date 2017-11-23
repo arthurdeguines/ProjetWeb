@@ -2,29 +2,11 @@
 
   function afficheRecette(){
     $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
-    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
-<<<<<<< HEAD
-                $req = "Select * from recette where tri <> 0 order by tri DESC  LIMIT 0,10";
-                $res = $mysqli->query($req);
-if ($res->num_rows > 0) {
-    // output data of each row
-    while($row = $res->fetch_assoc()) {
-          $recette.= "<div class=\"recette col-6\">"; 
-          $recette.= "<p class=\"temps_cuisson\">".$row["temps_cuisson"]." minutes</p>";
-          $recette.= "<img src=\"".$row["url_img"]."\" class=\"img_recette\"/>";
-          $recette.= "<h2>".$row["titre"]."</h2> <br>".troncText(nl2br($row["recette_text"])); //nl2br sert à mettre tout le text comme on l'a mis dans la bdd
-          $recette.= "</div>";
-      }
-    }
- else {
-    $recette.= "0 results";
-}
-=======
-    
+    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
   require("php/fonctions.php");
   $recette = "";
 
-    $req = "Select * from recette LIMIT 0,10";
+    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,10";
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {
         // output data of each row
@@ -73,7 +55,6 @@ if ($res->num_rows > 0) {
                else {
                   echo "0 results";
               }
->>>>>>> 029d7c3396f6bd0f43b7d2acf8202b497e3fce4d
 return $recette;
 }
 function getImage($id){
