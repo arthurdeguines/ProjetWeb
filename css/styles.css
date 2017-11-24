@@ -11,16 +11,10 @@
 /***********************
  * Essential Structure *
  ***********************/
-
+ 
 
  * {
      box-sizing: border-box;
- }
-
- li {
-
-	list-style-type: none; 
-	
  }
 
  body, html{
@@ -320,15 +314,9 @@ label{
 
 .containercategorie {
   position: relative;
-  float: left;
   width: 50%;
 }
-#loginfb{
-	width: 300px;
-	text-align: right;
-	float : right;
-	background-color: blue;
-}
+
 .image {
   display: block;
   width: 100%;
@@ -340,7 +328,7 @@ label{
   bottom: 0;
   left: 0;
   right: 0;
-  background-color: rgba(253, 142, 14, 0.5);
+  background-color: #008CBA;
   overflow: hidden;
   width: 0;
   height: 100%;

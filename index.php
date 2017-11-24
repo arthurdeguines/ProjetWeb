@@ -253,24 +253,10 @@ echo afficheRecette();
 <!-- Page Recette -->
 <div id="categorie">
   <h1> Categorie</h1>
-    <?php 
-    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
-    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
-    $req = "Select * from periode";
-    $res = $mysqli->query($req);
-if ($res->num_rows > 0) {
-    // output data of each row
-    while($row = $res->fetch_assoc()) {
-          echo "<div class=\"categorie col-12 containercategorie\">"; 
-          echo "<img src=\"".$row["img"]."\" class=\" image  \"/>";
-          echo "<div class=\" overlay text\">".$row["libelle"]."</div>";
-          echo "</div>";
-      }
-    }
- else {
-    echo "0 results";
-}
-  ?>
+      <?php
+require('php/categorie.php');
+echo afficheCategorie();
+?>
 
 </div>
 
