@@ -26,10 +26,11 @@
                 echo"</div>";
                 echo "<div class=\"cd-item-info\">";
                   echo "<h2>".$row["titre"]."</h2>";
-                  echo "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Officia, omnis illo iste ratione. Numquam eveniet quo, ullam itaque expedita impedit. Eveniet, asperiores amet iste repellendus similique reiciendis, maxime laborum praesentium.</p>";			
+                  echo "<p>".$row["recette_text"]."</p>";			
                   echo "<ul class=\"cd-item-action\">";
-                    echo "<li><button class=\"add-to-cart\">Add to cart</button></li>";	
-                    echo "<li><a href=\"#0\" class =\"titre\">Learn more</a></li>";
+                  echo '<form>
+                   <input id="impression" class="add-to-cart" name="impression" type="button" onclick="window.print()" value="Imprimer cette page" />
+                  </form>';
                   echo "</ul>";
                 echo "</div>";
                 echo "<a href=\"#0\" class=\"cd-close titre\">Close</a>";
@@ -37,10 +38,6 @@
             echo "</div>";
             echo "</div>";
             
-            echo "
-            <script type=\"text/javascript\">
-            </script>
-        ";
             }
             echo "</ul>";
             echo "</div>";
