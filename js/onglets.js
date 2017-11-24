@@ -8,7 +8,7 @@ $(function() {
     
 
     $('#creerbtn').click(function(){
-
+        
         $('#categoriebtn').removeClass();
         $('#creerbtn').removeClass();
         $('#recettebtn').removeClass();

@@ -65,10 +65,9 @@
                 <br>
 
                 
-                  <!-- FAcebook -->
-<div id="connection">
+<div >
 
-            <form method="post" action ='php/connection.php' >
+            <form id="connection" method="post" action ='php/connection.php' >
 
               <label><b>Login</b></label>
               <input  class ="input" type="text" placeholder="Enter Username" name="pseudo" required>
@@ -134,11 +133,23 @@
             <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
             <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
 
-            <button type="button" display "hide" class="col-3 btn btn-light btnimg" id="creerbtn">Créer
+<?php 
+  if( isset($_SESSION['pseudo'])):?>
+
+  <button type="button" display "hide" class="col-3 btn btn-light btnimg" id="creerbtn">Créer
+<?php else:?>
+   <button type="button" class="col-3 btn btn-light btnimg" onclick="document.getElementById('id01').style.display='block'" >Créer
+
+<?php
+endif;
+?>
+
+            
             <button type="button" class="col-3 btn btn-light btnimg" id="recettebtn">Nos recettes
             <button type="button" class="col-3 btn btn-light btnimg" id="categoriebtn">Catégorie
             <button type="button" class="col-3 btn btn-light btnimg" id="contactbtn">Contact
         </nav>
+
        
     
 

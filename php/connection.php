@@ -35,6 +35,7 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
                 } else {
                     // on ouvre la session avec $_SESSION:
                     $_SESSION['session'] = 1; // la session peut être appelée différemment et son contenu aussi peut être autre chose que le pseudo
+                        $_SESSION['pseudo']=1;
                     $_SESSION['erreur'] = 0;
                     echo 'Vous êtes connecté';
                     header('Location: http://localhost/ProjetWeb/ProjetWeb/');

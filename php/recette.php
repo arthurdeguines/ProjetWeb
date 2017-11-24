@@ -5,8 +5,11 @@
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
   require("php/fonctions.php");
   $recette = "";
-
+if (isset($_GET["cat"])) {
+  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." order by tri DESC LIMIT 0,12";
+}else{
     $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,12";
+  }
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {
         // output data of each row

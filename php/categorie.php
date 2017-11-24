@@ -9,12 +9,14 @@ if ($res->num_rows > 0) {
     // output data of each row
     while($row = $res->fetch_assoc()) {
       echo '<form>';
-       echo "<button onclick=\"showRecette(".$row["id"].")\" href=#\"?id=".$row["id"]."\" class=\"cd-trigger titre\">".$row["titre"];
+       
           echo "<div class=\"categorie col-12 containercategorie\">"; 
+          echo "<a href=\"./?cat=".$row["id"]."\">";
           echo "<img src=\"".$row["img"]."\" class=\" image  \"/>";
+          echo "</button>";
           echo "<div class=\" overlay text\">".$row["libelle"]."</div>";
           echo "</div>";
-          echo "</a></button>";
+          echo "</a>";
           echo '</form>';
       }
     }
