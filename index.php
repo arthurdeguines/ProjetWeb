@@ -4,12 +4,12 @@
     <meta charset="UTF-8">        
 
     <link href="css/reset-recette.css" rel="stylesheet">
-
+    <link href="css/style-contacts.css" rel="stylesheet">
     <link href="css/style-recette.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/styles.css" type="text/css" />
-    <link href="css/styles.css" rel="stylesheet">
-    <link href="css/style_contacts.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/styles-portable.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width: 641px) and (max-width: 1000px)" href="css/styles-tablette.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width: 1001px) " href="css/styles-pc.css" type="text/css" />
     <script src="js/modernizr.js"></script> 
     <script src="js/contacts_js.js"></script>    
     <script src="js/jquery-3.2.1.js"></script>
@@ -47,7 +47,7 @@
                 <input type="submit" value="Déconnection" class = "btn btn-light" ></input>
             </form>
         <?php else: ?> 
-            <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img class ="col-4" src="1.png"></button>
+            <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
         <?php endif; ?>
         
         </div>
@@ -127,15 +127,17 @@
 
 <!-- Onglets -->
 <br>
+
         <nav class="col-12">
-          <button type="button" display="hide" class="col-3 btn btn-light" id="creerbtn">Créer
-            <img id ="img1" class ="col-3" src="1.png" style = "display :none"> 
-          <button type="button" class="col-3 btn btn-light" id="recettebtn">Nos recettes
-              <img class ="col-3" src="1.png" style = "display :none"> 
-          <button type="button" class="col-3 btn btn-light" id="categoriebtn">Catégorie
-              <img class ="col-3" src="1.png" style = "display :none"> 
-          <button type="button" class="col-3 btn btn-light" id="contactbtn">Contact
-              <img class ="col-3" src="1.png" style = "display :none"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
+
+            <button type="button" display "hide" class="col-3 btn btn-light btnimg" id="creerbtn">Créer
+            <button type="button" class="col-3 btn btn-light btnimg" id="recettebtn">Nos recettes
+            <button type="button" class="col-3 btn btn-light btnimg" id="categoriebtn">Catégorie
+            <button type="button" class="col-3 btn btn-light btnimg" id="contactbtn">Contact
         </nav>
        
     
@@ -178,15 +180,15 @@
 
 <div id="recette">
 
-    <div class="row">
+    <div class="row filtres">
     <div class="col-4"></div>
-    <div class="col-6 btn-group" role="group" id="ButtonGroup" >
+    <div class="col-6 btn-group filtres" role="group" id="ButtonGroup" >
 
-      <button type= "button" class= "col-2 btn btn-light" id="IdeeJour">
+      <button type= "button" class= "col-2 btn btn-light filtres" id="IdeeJour">
       L'IDEE DU JOUR 
       </button>
 
-      <button type= "button" class= "col-2 btn btn-light" id="Filtre">
+      <button type= "button" class= "col-2 btn btn-light filtres" id="Filtre">
       LES RECETTES
       </button>
 
@@ -195,7 +197,7 @@
         Type
         </button>
        
-        <div class="dropdown-menu" aria-labelledby="dropdownMenu2">
+        <div class="dropdown-menu filtres" aria-labelledby="dropdownMenu2">
              <form method="post" action ='php/recherche.php' >
           <input type="submit" value="Tout" class="dropdown-item" type="button"  name="tout"/> 
           <input type="submit" value="Entrée" class="dropdown-item" type="button"  name="entree"/> 
