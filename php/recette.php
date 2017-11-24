@@ -15,7 +15,7 @@
               while($row = $res->fetch_assoc()) {
               echo "<li class=\"cd-item\">";
               echo "<img src=\"".$row["url_img"]."\" class=\" recetteimg  \" alt=\"".$row["id"]."\"/>";
-              echo "<button onclick=\"showRecette(".$row["id"].")\" href=#\"?id=".$row["id"]."\" class=\"cd-trigger titre\">".$row["titre"]."</button>";
+              echo "<a onclick=\"showRecette(".$row["id"].")\" href=# class=\"cd-trigger titre\">".$row["titre"]."</a>";
               echo "</li>";
               echo "<div class=\"div".$row["id"]." divlol\">";
               echo "<div class=\"cd-quick-view\">";

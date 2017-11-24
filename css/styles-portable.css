@@ -367,3 +367,9 @@ display: none;
 .filtres{
 display:none;
 }
+.pc{
+display:none;
+}
+.portable{
+float:top-right;
+}

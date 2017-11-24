@@ -129,7 +129,9 @@ input[type=text], input[type=password] {
     box-sizing: border-box;
 }
 
-
+a:hover{
+	color: white
+}
 
 button:hover {
     opacity: 0.8;
@@ -362,4 +364,7 @@ label{
   display:none;
 
 }
+.portable{
+  display:none;
 
+}
