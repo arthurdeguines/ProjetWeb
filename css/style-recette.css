@@ -167,14 +167,14 @@ Main components
 .no-touch .cd-trigger:hover {
   background: rgba(0, 0, 0, 0.2);
 }
-@media only screen and (min-width: 1024px) {
+@media only screen {
   .cd-trigger {
     /* always visible on small devices */
     visibility: visible;
     opacity: 1;
   }
 }
-@media only screen and (min-width: 1170px) {
+@media only screen  {
   .cd-trigger {
     /* only visible on hover on big devices */
     opacity: 0;
@@ -194,10 +194,10 @@ Main components
   /* quick view non available on small devices */
   display: none;
 }
-@media only screen and (min-width: 1024px) {
+@media only screen {
   .cd-quick-view {
     display: block;
-    position: fixed;
+    position: absolute;
     max-width: 900px;
     visibility: hidden;
     /* Force Hardware Acceleration in WebKit */

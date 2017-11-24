@@ -13,16 +13,12 @@
     <script src="js/modernizr.js"></script> 
     <script src="js/contacts_js.js"></script>    
     <script src="js/jquery-3.2.1.js"></script>
-
-    <script src="js/velocity.min.js"></script>
-    
+    <script src="js/velocity.min.js"></script>   
     <script src="js/showrecette.js"></script>
     <script src="js/main-recette.js"></script>
     <script src="js/facebook.js"></script>
-
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
-
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
     
@@ -34,7 +30,15 @@
     <br>
     <div class="container">
       <div class="row">
-        <div class="col-lg-2">Logo</div>
+        <div class="col-lg-2">Logo
+        <?php if ( isset ($_SESSION['session'])): ?>
+            <form method="post" class ="col-2 portable" action ='php/deco.php' >
+                <input type="submit" value="Déconnection" class = "btn btn-light portable" ></input>
+            </form>
+        <?php else: ?> 
+            <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
+        <?php endif; ?>
+        </div>
         <form class=" col-lg-8 flexsearch--form" method="post" action ='php/recherche.php'>
             <div class="col-lg-12 flexsearch--input-wrapper">
                 <input class="flexsearch--input" type="search" placeholder="search" name="search">
@@ -43,11 +47,11 @@
         </form>     
            
         <?php if ( isset ($_SESSION['session'])): ?>
-            <form method="post" class ="col-2" action ='php/deco.php' >
+            <form method="post" class ="col-2 pc" action ='php/deco.php' >
                 <input type="submit" value="Déconnection" class = "btn btn-light" ></input>
             </form>
         <?php else: ?> 
-            <button class = "col-lg-2 btn btn-light" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
+            <button class = "col-lg-2 btn btn-light pc" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
         <?php endif; ?>
         
         </div>
@@ -128,10 +132,10 @@
 <br>
 
         <nav class="col-12">
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> </button>
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png">
 
 <?php 
   if( isset($_SESSION['pseudo'])):?>
