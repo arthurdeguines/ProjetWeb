@@ -1,7 +1,7 @@
   <?php 
 
   function afficheRecette(){
-    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+  $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
   require("php/fonctions.php");
   $recette = "";
@@ -57,7 +57,7 @@ if (isset($_GET["cat"])) {
 return $recette;
 }
 function getImage($id){
-  $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+  $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
   $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
   $req = 'Select url_img from recette where id='.$id;
   $res = $mysqli->query($req);

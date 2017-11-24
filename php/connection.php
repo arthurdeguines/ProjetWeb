@@ -17,7 +17,7 @@ if(isset($_POST['connexion'])) { // si le bouton "Connexion" est appuyé
             $Pseudo = htmlentities($_POST['pseudo'], ENT_QUOTES, "ISO-8859-1"); // le htmlentities() passera les guillemets en entités HTML, ce qui empêchera les injections SQL
             $MotDePasse = htmlentities($_POST['pass'], ENT_QUOTES, "ISO-8859-1");
             //on se connecte à la base de données:
-            $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+                $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
             //on vérifie que la connexion s'effectue correctement:
             if(!$mysqli){
                 $_SESSION['erreur'] = 1;

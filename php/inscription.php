@@ -10,7 +10,7 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
     $MotDePasse = htmlentities($_POST['inscription_password'], ENT_QUOTES, "ISO-8859-1");
     $MotDePasse2 = htmlentities($_POST['inscription_password2'], ENT_QUOTES, "ISO-8859-1");
     $Email = htmlentities($_POST['inscription_email'], ENT_QUOTES, "ISO-8859-1");
-    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+    $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
     $veriflog = mysqli_query($mysqli,"SELECT login FROM utilisateur WHERE login = '".$Pseudo."'");
      $row= mysqli_fetch_array($veriflog);
         echo $row["login"];

@@ -1,7 +1,7 @@
 <?php 
     
 function afficheCategorie(){
-  $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+  $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
     $req = "Select * from categorie";
     $res = $mysqli->query($req);

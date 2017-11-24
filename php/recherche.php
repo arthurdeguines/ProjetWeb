@@ -1,6 +1,6 @@
 <?php
 if(isset($_POST['rechercher'])) {
-	$mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+  $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
     $recherche =  htmlentities($_POST['search'], ENT_QUOTES, "ISO-8859-1");
                 $req = "Select * from recette";

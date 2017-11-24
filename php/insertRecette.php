@@ -6,7 +6,7 @@ if(isset($_POST['envoiRecette'])) { // si le bouton "Connexion" est appuyé
     $difficulte = htmlentities($_POST['difficulte'], ENT_QUOTES, "ISO-8859-1");
     $recette = htmlentities($_POST['recette'], ENT_QUOTES, "ISO-8859-1"); // le htmlentities() passera les guillemets en entités HTML, ce qui empêchera les injections SQL
     
-    $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+    $mysqli = mysqli_connect("auth-db128.hostinger.fr", "u774378556_arthu", "azerty", "u774378556_udev");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents
     $req = "INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_periode,id_type,recette_text)  VALUES
     	(null, '$img' , '$titre' , '2017-11-11' , '$temps', 0, $difficulte,1,1,2,'$recette'  );";
