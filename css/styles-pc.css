@@ -1,9 +1,3 @@
-@media screen and (max-width: 640px) {
-    .creerbtn {
-      display:none;
-    }
-  }
-
 
 
 @import "compass/css3";
@@ -11,10 +5,18 @@
 /***********************
  * Essential Structure *
  ***********************/
- 
+
 
  * {
      box-sizing: border-box;
+ }
+
+
+
+ li {
+
+	list-style-type: none; 
+	
  }
 
  body, html{
@@ -349,5 +351,10 @@ label{
   vertical-align: middle;
   transform: translate(-50%, -50%);
   -ms-transform: translate(-50%, -50%);
+}
+
+.imgbtn{
+  display:none;
+
 }
 
