@@ -15,7 +15,7 @@ $(function() {
         $('#contactbtn').removeClass();
 
         $('#categoriebtn').addClass('col-2 btn btn-light');
-        $('#creerbtn').addClass('col-6 btn btn-warning');
+        $('#creerbtn').addClass('col-4 btn btn-warning');
         $('#recettebtn').addClass('col-2 btn btn-light');
         $('#contactbtn').addClass('col-2 btn btn-light');
 
@@ -44,7 +44,7 @@ $(function() {
         $('#recettebtn').removeClass();
         $('#contactbtn').removeClass();
 
-        $('#categoriebtn').addClass('col-6 btn btn-warning');
+        $('#categoriebtn').addClass('col-4 btn btn-warning');
         $('#creerbtn').addClass('col-2 btn btn-light');
         $('#recettebtn').addClass('col-2 btn btn-light');
         $('#contactbtn').addClass('col-2 btn btn-light');
@@ -78,7 +78,7 @@ $(function() {
         $('#categoriebtn').addClass('col-2 btn btn-light');
         $('#creerbtn').addClass('col-2 btn btn-light');
         $('#recettebtn').addClass('col-2 btn btn-light');
-        $('#contactbtn').addClass('col-6 btn btn-warning');
+        $('#contactbtn').addClass('col-4 btn btn-warning');
 
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
@@ -106,7 +106,7 @@ $(function() {
 
         $('#categoriebtn').addClass('col-2 btn btn-light');
         $('#creerbtn').addClass('col-2 btn btn-light');
-        $('#recettebtn').addClass('col-6 btn btn-warning');
+        $('#recettebtn').addClass('col-4 btn btn-warning');
         $('#contactbtn').addClass('col-2 btn btn-light');
 
         $('#creer').hide();
@@ -127,7 +127,7 @@ $(function() {
         $('#IdeeJour').removeClass();
         $('#Filtre').removeClass();
 
-        $('#IdeeJour').addClass('col-4 btn btn-warning').text('L\'IDEE DU JOUR');
+        $('#IdeeJour').addClass('col-3 btn btn-warning').text('L\'IDEE DU JOUR');
         $('#Filtre').addClass('btn btn-light').html('<img src="assiette.png" width="25" height="25" id="lg_recette"/>');
 
         $('#droptype').hide();
@@ -141,7 +141,7 @@ $(function() {
         $('#Filtre').removeClass();
 
         $('#IdeeJour').addClass('btn btn-light').html('<img src="idée.png" width="25" height="25" id="lg_idee"/>');
-        $('#Filtre').addClass('col-4 btn btn-warning').text('LES RECETTES');
+        $('#Filtre').addClass('col-3 btn btn-warning').text('LES RECETTES');
 
         $('#droptype').show();
         $('#dropfiltre').show();

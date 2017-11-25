@@ -6,7 +6,9 @@
  * Essential Structure *
  ***********************/
 
-
+body {
+	text-align: center;
+}
  * {
      box-sizing: border-box;
  }
