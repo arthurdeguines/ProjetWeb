@@ -97,24 +97,34 @@ Main components
 @media only screen and (min-width: 768px) {
   .cd-items {
     padding: 2em 0 0;
-  }
+
+}
 }
 @media only screen and (min-width: 1024px) {
   .cd-items {
     padding: 4em 0 0;
+
+  }
+  .cd-item {
+
+    height: 170px;
+    
+  }
+  .cd-item > img {
+    height: 100%;
   }
 }
 
 .cd-item {
   position: relative;
   margin: 0 0 1em;
-  height: 170px;
+  
   
 }
 .cd-item > img {
   display: block;
   width: 100%;
-  height: 100%;
+  
 }
 @media only screen and (min-width: 768px) {
   .cd-item {
@@ -246,29 +256,6 @@ Main components
 .cd-slider {
   float: left;
 }
-.cd-slider li {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 1;
-}
-.cd-slider li img {
-  display: block;
-  width: 100%;
-  max-width: 400px;
-}
-.cd-slider li.selected {
-  position: relative;
-  z-index: 3;
-}
-.add-content .cd-slider {
-  margin-right: 3em;
-}
-
-.add-content {
-  opacity: 1;
-}
-
 
 
 .cd-item-info {
@@ -279,19 +266,7 @@ Main components
   -webkit-transition: opacity .3s, visibility 0s;
   -moz-transition: opacity .3s, visibility 0s;
   transition: opacity .3s, visibility 0s;
-}
-.cd-item-info h2 {
-  font-size: 28px;
-  font-size: 1.75rem;
-}
-.cd-item-info p {
-  line-height: 1.6;
-  margin: 1em 0;
-  color: #67919c;
-}
-.cd-item-info .cd-item-action li {
-  display: inline-block;
-  margin-right: 1em;
+
 }
 .cd-item-info .cd-item-action li:first-child {
   margin-left: -4px;
