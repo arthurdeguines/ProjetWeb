@@ -203,7 +203,7 @@ Etape 24
 Une part ?');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,1,4,2,3,1,'1
+(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,0,4,2,3,1,'1
 Egouttez le crabe. Ouvrez une boîte vide des deux côtés afin de disposer d\'un cercle de 8 cm de diamètre. A l\'aide de ce cercle, découpez deux ronds dans chaque tranche de saumon.
 2
 Récupérez les chutes et hachez-les. Pelez et hachez finement les échalotes. Ciselez les fines herbes.
@@ -213,7 +213,7 @@ Pour finir
 Pour monter les millefeuilles, déposez un rond de saumon au centre des assiettes, posez la boîte évidée dessus, garnissez de crabe puis d\'un autre rond de saumon. Recommencez deux fois. Retirez délicatement la boîte. Gardez au réfrigérateur et servez frais.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/bf85623bd603fa2079b5ccf90178114abf92be2f-tomates-courgettes-oeufs-rapide.jpg','Tomates courgettes oeufs rapide','2017-12-12',30,1,1,2,5,2,'- Laver les légumes 
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/bf85623bd603fa2079b5ccf90178114abf92be2f-tomates-courgettes-oeufs-rapide.jpg','Tomates courgettes oeufs rapide','2017-12-12',30,0,1,2,5,2,'- Laver les légumes 
 - Éplucher la courgette partiellement (faire des "rayures")
 - Couper la courgette en rondelles puis chaques rondelles en quarts
 - Couper les tomates en tranches puis chaques tranches en deux
@@ -284,7 +284,7 @@ Faire fondre le beurre et dès qu\'il mousse, saisir les escalopes des 2 côtés
 servez avec des pâtes, du riz, de la purée et régalez vous!');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/287197000e20f63bed48bbdfbdcdc8e0bb60e198-courgettes-fromage-lardon.jpg','COURGETTES FROMAGE/LARDON','2017-12-11',20,1,4,2,3,1,'1. Couper les courgettes dans la longueur à moitié égales puis creuser les deux moitiés. Réserver la pulpe récupérée.
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/287197000e20f63bed48bbdfbdcdc8e0bb60e198-courgettes-fromage-lardon.jpg','COURGETTES FROMAGE/LARDON','2017-12-11',20,0,4,2,3,1,'1. Couper les courgettes dans la longueur à moitié égales puis creuser les deux moitiés. Réserver la pulpe récupérée.
 
 2. Faire revenir dans une poêle l\'ail, les lardons et la pulpe de courgettes récupérée précédemment.
 

@@ -10,7 +10,10 @@
  * {
      box-sizing: border-box;
  }
-
+.logo{
+	width: 50%;
+	height: 50%;
+}
 
 
  li {
