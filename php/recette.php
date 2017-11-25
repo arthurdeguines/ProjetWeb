@@ -29,7 +29,7 @@ if (isset($_GET["cat"])) {
                 echo"</div>";
                 echo "<div class=\"cd-item-info\">";
                   echo "<h2>".$row["titre"]."</h2>";
-                  echo "<p>".$row["recette_text"]."</p>";			
+                  echo "<p>".nl2br($row["recette_text"])."</p>";			
                   echo "<ul class=\"cd-item-action\">";
                   echo '<form>
                    <input id="impression" class="add-to-cart" name="impression" type="button" onclick="window.print()" value="Imprimer cette page" />
