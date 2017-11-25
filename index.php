@@ -21,6 +21,8 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
+    <link rel="shortcut icon" href="img/favicon.ico">
+
     
 
   </head>
@@ -39,6 +41,7 @@
             <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
         <?php endif; ?>
         </div>
+
         <form class=" col-lg-8 flexsearch--form" method="post" action ='php/recherche.php'>
             <div class="col-lg-12 flexsearch--input-wrapper">
                 <input class="flexsearch--input" type="search" placeholder="search" name="search">
@@ -63,7 +66,9 @@
               <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
             </div>
             <div class="container">
-
+            <?php       
+            require('php/gpConfig.php');
+            ?>
                 <button class="btn btn-light" id="connectionbtn">Connection</button>
                 <button class="btn btn-light" id="enregistrerbtn">Enregistrer</button>
                 <br>
@@ -72,6 +77,8 @@
 <div >
 
             <form id="connection" method="post" action ='php/connection.php' >
+           
+        
 
               <label><b>Login</b></label>
               <input  class ="input" type="text" placeholder="Enter Username" name="pseudo" required>
@@ -126,6 +133,7 @@
         <div class= "alert alert-danger col-12" role ="alert"> Pseudo déjà utilisé. </div>
             
 <?php endif; ?>
+
 
 
 <!-- Onglets -->
