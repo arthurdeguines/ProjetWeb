@@ -1,14 +1,18 @@
   <?php 
 
-  function afficheRecette(){
+  function afficheRecette($n){
   $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
   require("php/fonctions.php");
   $recette = "";
 if (isset($_GET["cat"])) {
-  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." order by tri DESC LIMIT 0,12";
+  if($n==1){
+  $req = "Select * from recette where id = 1 LIMIT 0,".$n;
+  }else{
+  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." order by tri DESC LIMIT 0,".$n;
+}
 }else{
-    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,12";
+    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,".$n;
   }
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {
@@ -63,6 +67,30 @@ function getImage($id){
   $res = $mysqli->query($req);
   $row = $res->fetch_assoc();
   return $row["url_img"];
+}
+function afficheunerecette(){
+  $mysqli = mysqli_connect("localhost", "root", "", "projetweb");
+    $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
+  require("php/fonctions.php");
+  $recette = "";
+if (isset($_GET["cat"])) {
+  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." order by tri DESC LIMIT 0,12";
+}else{
+    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,1";
+  }
+    $res = $mysqli->query($req);
+        if ($res->num_rows > 0) {
+        // output data of each row
+          echo "<div id =\"recettebody\" ";         
+          echo "<ul class=\"cd-items cd-container\">"; 
+              while($row = $res->fetch_assoc()) {
+              echo "<li class=\"cd-item\">";
+              echo "<img src=\"".$row["url_img"]."\" class=\" recetteimg  \" alt=\"".$row["id"]."\"/>";
+              echo "<a onclick=\"showRecette(".$row["id"].")\" href=# class=\"cd-trigger titre\">".$row["titre"]."</a>";
+              echo "</li>";
+            }
+          }
+
 }
 
   ?>

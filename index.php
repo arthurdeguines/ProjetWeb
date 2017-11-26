@@ -140,10 +140,10 @@
 <br>
 
         <nav class="col-12">
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png">
+            <button type="button" class="col-3 btn btn-light imgbtn" id="creerbtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" id="recettebtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" id="categoriebtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" id="contactbtn"><img class ="imgbtn" src="1.png">
 
 <?php 
   if( isset($_SESSION['pseudo'])):?>
@@ -261,12 +261,17 @@ endif;
   
   <h1> Recettes!</h1>
 
-  <div class="row">
 
   <!--Affichage des recettes -->
+  <div id="listerecette">
   <?php
 require('php/recette.php');
-echo afficheRecette();
+echo afficheRecette(12);
+?>
+</div>
+<div id = "unerecette">
+  <?php
+echo afficheRecette(1);
 ?>
 
 </div>
