@@ -141,6 +141,11 @@
 <?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 5): ?> 
 
         <div class= "alert alert-danger col-12" role ="alert"> Format d'email non valide. </div>
+
+<?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 0): ?> 
+
+        <div class="alert alert-success col-12" role="alert"> Vous êtes connecté. </div>
+
             
 <?php endif; ?>
 

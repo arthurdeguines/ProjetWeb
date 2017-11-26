@@ -75,7 +75,7 @@ if (isset($authUrl)){
 } else {
     $_SESSION['session'] = 1;
     $_SESSION['pseudo']=1;
-    $_SESSION['erreur'] = 0;
+   
     
     
     
