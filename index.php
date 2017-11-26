@@ -36,13 +36,14 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-2">
-        <img class ="imgauto" src="img/end.png">
+        <img class ="logo1 imgauto" src="img/logo1.png">
+        <img class ="logo2 imgauto" src="img/logo2.png">
         <?php if ( isset ($_SESSION['session'])): ?>
             <form method="post" action ='php/deco.php' >
                 <input type="submit" value="Déconnection" class = " col-lg-2 btn btn-light portable" ></input>
             </form>
         <?php else: ?> 
-            <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgauto" src="img/login.png"></button>
+            <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgauto" src="img/login2.png"></button>
         <?php endif; ?>
         </div>
 
