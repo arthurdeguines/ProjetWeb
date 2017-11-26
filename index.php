@@ -425,7 +425,7 @@ echo afficheCategorie();
     </footer>
 
 
-
+  <?php unset($_SESSION['erreur']); ?>
     <script>
             // Get the modal
             var modal = document.getElementById('id01');

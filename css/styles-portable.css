@@ -371,6 +371,9 @@ display:none;
 .portable{
 float:top-right;
 }
+a:hover{
+	color: white
+}
 
 #creerbtn{
 	display:none;	
