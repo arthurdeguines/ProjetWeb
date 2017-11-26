@@ -84,8 +84,8 @@
               <input  class ="input" type="text" placeholder="Enter Username" name="pseudo" required>
               <label><b>Mot de passe</b></label>
               <input  class ="input" type="password" placeholder="Enter Password" name="pass" required><br><br><br>
-              <button name="connexion" value="Connexion" class ="btn btn-success validerbtn col-2">Valider</button>
-              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger col-2">Annuler</button><br>
+              <button name="connexion" value="Connexion" class ="btn btn-success validerbtn ">Valider</button>
+              <button type="button" onclick="document.getElementById('id01').style.display='none'" class="btn btn-danger ">Annuler</button><br>
               <span class="col-2"> <a href="#">Mot de passe oublié?</a></span>
               
             </form>
