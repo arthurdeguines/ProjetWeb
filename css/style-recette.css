@@ -126,14 +126,15 @@ Main components
   width: 100%;
   
 }
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px)  and (max-width: 1024px){
   .cd-item {
     width: 48%;
     float: left;
-    margin: 0 4% 2em 0;
+    margin: 0em 2% 0em 0;
+    height: 300px;
   }
   .cd-item:nth-child(2n) {
-    margin-right: 0;
+    margin: 0em 2% 0em 0;
   }
 }
 @media only screen and (min-width: 1024px) {
