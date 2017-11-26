@@ -136,6 +136,11 @@ Main components
   .cd-item:nth-child(2n) {
     margin: 0em 2% 0em 0;
   }
+  .cd-item {
+    
+        height: 250px;
+        
+      }
 }
 @media only screen and (min-width: 1024px) {
   .cd-item {
