@@ -140,15 +140,15 @@
 <br>
 
         <nav class="col-12">
+            <button type="button" class="col-3 btn btn-light imgbtn" ><img class ="imgbtn" src="1.png"> 
             <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" ><img class ="imgbtn" src="1.png"> 
             <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png">
 
 <?php 
   if( isset($_SESSION['pseudo'])):?>
 
-  <button type="button" display "hide" class="col-3 btn btn-light btnimg" id="creerbtn">Créer
+  <button type="button" disp="col-3 btn btn-light btnimg" id="creerbtn">Créer
 <?php else:?>
    <button type="button" class="col-3 btn btn-light btnimg" onclick="document.getElementById('id01').style.display='block'" >Créer
 
@@ -261,12 +261,17 @@ endif;
   
   <h1> Recettes!</h1>
 
-  <div class="row">
 
   <!--Affichage des recettes -->
+  <div id="listerecette">
   <?php
 require('php/recette.php');
-echo afficheRecette();
+echo afficheRecette(12);
+?>
+</div>
+<div id = "unerecette">
+  <?php
+echo afficheRecette(1);
 ?>
 
 </div>
