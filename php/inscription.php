@@ -20,6 +20,12 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
         echo"lol2";
         header('Location: http://localhost/ProjetWeb/ProjetWeb/');
          }
+
+    elseif (!preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $Email)) {
+        $_SESSION['erreur'] = 5;
+        header('Location: http://localhost/ProjetWeb/ProjetWeb/');
+
+    }
     elseif(!$mysqli){
         $_SESSION['erreur'] = 1;
         echo"lol3";

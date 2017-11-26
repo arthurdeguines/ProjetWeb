@@ -137,6 +137,10 @@
 <?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 4): ?> 
 
         <div class= "alert alert-danger col-12" role ="alert"> Pseudo déjà utilisé. </div>
+
+<?php elseif (isset($_SESSION['erreur']) && $_SESSION['erreur'] == 5): ?> 
+
+        <div class= "alert alert-danger col-12" role ="alert"> Format d'email non valide. </div>
             
 <?php endif; ?>
 
