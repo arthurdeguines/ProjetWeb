@@ -293,7 +293,7 @@ endif;
   <div id="listerecette">
   <?php
 require('php/recette.php');
-echo afficheRecette(12);
+echo afficheRecette(100);
 ?>
 </div>
 <div id = "unerecette">
