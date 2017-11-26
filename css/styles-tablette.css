@@ -368,3 +368,13 @@ display:none;
 .pc{
 display:none;
 }
+.imgauto{
+	text-align: center;
+	display:block;
+	margin:auto;
+}
+h1{
+	text-align: center;
+	display:block;
+	margin:auto;
+}

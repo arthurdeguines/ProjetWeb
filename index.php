@@ -35,13 +35,14 @@
     <br>
     <div class="container">
       <div class="row">
-        <div class="col-lg-2">Logo
+        <div class="col-lg-2">
+        <img class ="imgauto" src="img/end.png">
         <?php if ( isset ($_SESSION['session'])): ?>
-            <form method="post" class ="col-2 portable" action ='php/deco.php' >
-                <input type="submit" value="Déconnection" class = "btn btn-light portable" ></input>
+            <form method="post" action ='php/deco.php' >
+                <input type="submit" value="Déconnection" class = " col-lg-2 btn btn-light portable" ></input>
             </form>
         <?php else: ?> 
-            <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
+            <button class = "col-lg-2 btn btn-light portable" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgauto" src="img/login.png"></button>
         <?php endif; ?>
         </div>
 
@@ -58,7 +59,7 @@
                 <input type="submit" value="Déconnection" class = "btn btn-light" ></input>
             </form>
         <?php else: ?> 
-            <button class = "col-lg-2 btn btn-light pc" onclick="document.getElementById('id01').style.display='block'" style="width:auto;"><img src="1.png"></button>
+            <button class = "col-lg-2 btn btn-light pc" onclick="document.getElementById('id01').style.display='block'"><img class ="imgauto" src="img/login.png"></button>
         <?php endif; ?>
         
         </div>
@@ -147,16 +148,16 @@
         <?php 
         if( isset($_SESSION['pseudo'])):?>
       
-      <button type="button" class="col-3 btn btn-light imgbtn" id="creerbtnmin"><img class ="imgbtn" src="1.png"> 
+      <button type="button" class="col-3 btn btn-light imgbtn" id="creerbtnmin"><img class ="imgbtn" src="img/plus.png"> 
       <?php else:?>
-         <button type="button" class="col-3 btn btn-light imgbtn" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgbtn" src="1.png">
+         <button type="button" class="col-3 btn btn-light imgbtn" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgbtn" src="img/plus.png">
       
          <?php
         endif;
         ?>
-           <button type="button" class="col-3 btn btn-light imgbtn" id="recettebtnmin"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn" id="categoriebtnmin"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"  id="contactbtnmin"><img class ="imgbtn" src="1.png">
+           <button type="button" class="col-3 btn btn-light imgbtn" id="recettebtnmin"><img class ="imgbtn" src="img/recette.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" id="categoriebtnmin"><img class ="imgbtn" src="img/categorie.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"  id="contactbtnmin"><img class ="imgbtn" src="img/contact.png">
 
 <?php 
   if( isset($_SESSION['pseudo'])):?>
@@ -181,34 +182,37 @@ endif;
 
 <!-- Page Créer une recette -->
 
+
+
 <div id="creer">
+<h1> Créer!</h1>
 
   <form  method="post" action ='php/insertRecette.php'>
       
-  <div class="row">
+  <div class="row" id="name-form">
 
         <label class ="disblock" for="name">Titre</label>
-        <input class ="disblock col-9 input" type="text" id="name" name="titre" />
+        <input class =" col-9 input" type="text" id="name" name="titre" />
     </div>
     
     <div class="row">
     
         <label class ="disblock" for="email">Image</label>
-        <input class ="disblock col-9 input" type="text" id="email" name="img" />
+        <input class =" col-9 input" type="text" id="email" name="img" />
     </div>
     <div class="row">
 
         <label class ="disblock" for="email">Temps Cuisson</label>
-        <input class ="disblock col-9 input" type="text" id="email" name="temps" />
+        <input class =" col-9 input" type="text" id="email" name="temps" />
     </div>
 
         <div class="row" id="email-form">
         <label class ="disblock" for="email">Difficulté</label>
-        <input class ="disblock col-9 input" type="text" id="email" name="difficulte" />
+        <input class =" col-9 input" type="text" id="email" name="difficulte" />
     </div>
     <div class="row" id="message-form">
         <label class ="disblock" for="message">Recette</label>
-        <textarea class ="disblock input col-9" id="message" name="recette"></textarea>
+        <textarea class =" input col-9" id="message" name="recette"></textarea>
     </div>
     
     
@@ -311,7 +315,10 @@ echo afficheCategorie();
 
 <!-- Page Contact -->
 
+
 <div id="contact">
+<h1> Contact!</h1>
+
   <div class ="col-12" id="cform">
     <div class="fruit" id="fruit"></div>
     <div class="fruit" id="fruit2"></div>
