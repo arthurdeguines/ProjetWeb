@@ -149,7 +149,7 @@
 <!-- Onglets -->
 <br>
 
-        <nav class="col-12">
+        <nav class="col-12 navmenu">
         <?php 
         if( isset($_SESSION['pseudo'])):?>
       

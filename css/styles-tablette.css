@@ -385,3 +385,8 @@ h1{
 	display:none;
   
   }
+  .navmenu{
+	text-align: center;
+	display:block;
+	margin:auto;
+}
