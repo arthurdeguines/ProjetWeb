@@ -60,7 +60,12 @@
 	
 }
 .disblock{
-	display: block;	
+
+		display: block;
+		width: 200px;
+		float: left;
+
+	
 }
 
 #message{

@@ -316,8 +316,7 @@ label{
 
 .containercategorie {
   position: relative;
-  float: left;
-  width: 50%;
+  width: 100%;
 }
 #loginfb{
 	width: 300px;
@@ -361,8 +360,9 @@ label{
 
 
 .btnimg{
-display: none;
-}
+	display:none;
+  
+  }
 
 .filtres{
 display:none;
@@ -372,4 +372,17 @@ display:none;
 }
 .portable{
 float:top-right;
+}
+
+#creerbtn{
+	display:none;	
+}
+#recettebtn{
+	display:none;	
+}
+#categoriebtn{
+	display:none;	
+}
+#contactbtn{
+	display:none;	
 }

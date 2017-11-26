@@ -322,7 +322,7 @@ label{
 	width: 300px;
 	text-align: right;
 	float : right;
-	background-color: blue;
+	background-color: rgb(176, 176, 197);
 }
 .image {
   display: block;
@@ -358,9 +358,10 @@ label{
   -ms-transform: translate(-50%, -50%);
 }
 
-.btnimg{
-display: none;
-}
+.imgbtn{
+	display:none;
+  
+  }
 .filtres{
 display:none;
 }

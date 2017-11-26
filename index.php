@@ -7,9 +7,9 @@
     <link href="css/style-contacts.css" rel="stylesheet">
     <link href="css/style-recette.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" media="screen and (min-width: 1000px) " href="css/styles-pc.css" type="text/css" />
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/styles-portable.css" type="text/css" />
-    <link rel="stylesheet" media="screen and (min-width: 641px) and (max-width: 1000px)" href="css/styles-tablette.css" type="text/css" />
-    <link rel="stylesheet" media="screen and (min-width: 1001px) " href="css/styles-pc.css" type="text/css" />
+    <link rel="stylesheet" media="screen and (min-width: 640px) and (max-width: 1000px)" href="css/styles-tablette.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="css/footer.css">
 
     <script src="js/modernizr.js"></script> 
@@ -147,7 +147,7 @@
         <?php 
         if( isset($_SESSION['pseudo'])):?>
       
-        <button type="button" disp="col-3 btn btn-light imgbtn" id="creerbtnmin"><img class ="imgbtn" src="1.png">
+      <button type="button" class="col-3 btn btn-light imgbtn" id="creerbtnmin"><img class ="imgbtn" src="1.png"> 
       <?php else:?>
          <button type="button" class="col-3 btn btn-light imgbtn" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgbtn" src="1.png">
       
@@ -182,33 +182,38 @@ endif;
 <!-- Page Créer une recette -->
 
 <div id="creer">
-  <h1> Créer </h1>
+
   <form  method="post" action ='php/insertRecette.php'>
       
-    <div class="formgroup" >
+  <div class="row">
+
         <label class ="disblock" for="name">Titre</label>
         <input class ="disblock col-9 input" type="text" id="name" name="titre" />
     </div>
     
-    <div class="formgroup" >
+    <div class="row">
+    
         <label class ="disblock" for="email">Image</label>
         <input class ="disblock col-9 input" type="text" id="email" name="img" />
     </div>
-        <div class="formgroup" >
+    <div class="row">
+
         <label class ="disblock" for="email">Temps Cuisson</label>
         <input class ="disblock col-9 input" type="text" id="email" name="temps" />
     </div>
 
-        <div class="formgroup" id="email-form">
+        <div class="row" id="email-form">
         <label class ="disblock" for="email">Difficulté</label>
         <input class ="disblock col-9 input" type="text" id="email" name="difficulte" />
     </div>
-    <div class="formgroup" id="message-form">
+    <div class="row" id="message-form">
         <label class ="disblock" for="message">Recette</label>
         <textarea class ="disblock input col-9" id="message" name="recette"></textarea>
     </div>
     
-      <input class ="disblock input btnorange" type="submit" name="envoiRecette" value="Envoyer la recette!" />
+    
+      <input  class =" input btnorange" type="submit" name="envoiRecette" value="Envoyer la recette!" />
+
     </form>
 </div>
 
@@ -313,17 +318,17 @@ echo afficheCategorie();
     
     <form id="contactform" method="post" id="connection" action ='php/envoiMail.php' >
     
-    <div class="formgroup" id="name-form">
+    <div class="row" id="name-form">
         <label class ="disblock" for="name">Votre nom*</label>
         <input class ="disblock col-9 input" type="text" id="name" name="name" />
     </div>
     
-    <div class="formgroup" id="email-form">
+    <div class="row" id="email-form">
         <label class ="disblock" for="email">E-mail*</label>
         <input class ="disblock col-9 input" type="email" id="email" name="email" />
     </div>
     
-    <div class="formgroup" id="message-form">
+    <div class="row" id="message-form">
         <label class ="disblock" for="message">Votre message</label>
         <textarea class ="disblock input col-9" id="message" name="message"></textarea>
     </div>

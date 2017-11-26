@@ -192,9 +192,6 @@ $(function() {
         $('#droptype').show();
         $('#dropfiltre').show();
 
-        
-
-
 
         $('#Div_Filtre').show();
     });
