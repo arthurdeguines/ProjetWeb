@@ -21,7 +21,7 @@ if(isset($_POST['inscription'])) { // si le bouton "Connexion" est appuyé
         header('Location: http://localhost/ProjetWeb/ProjetWeb/');
          }
 
-    elseif (!preg_match('#^[\w.-]+@[\w.-]+\.[a-z]{2,6}$#i', $Email)) {
+    elseif (!preg_match('/^[^\W][a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\@[a-zA-Z0-9_]+(\.[a-zA-Z0-9_]+)*\.[a-zA-Z]{2,4}$/', $Email)) {
         $_SESSION['erreur'] = 5;
         header('Location: http://localhost/ProjetWeb/ProjetWeb/');
 
