@@ -10,6 +10,8 @@
     <link rel="stylesheet" media="screen and (max-width: 640px)" href="css/styles-portable.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width: 641px) and (max-width: 1000px)" href="css/styles-tablette.css" type="text/css" />
     <link rel="stylesheet" media="screen and (min-width: 1001px) " href="css/styles-pc.css" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="css/footer.css">
+
     <script src="js/modernizr.js"></script> 
     <script src="js/contacts_js.js"></script>    
     <script src="js/jquery-3.2.1.js"></script>
@@ -21,6 +23,7 @@
     <script type="text/javascript" src="js/bootstrap.min.js"></script>
     <script type="text/javascript" src="js/connectionenregistrer.js"></script>
     <script type="text/javascript" src="js/onglets.js"></script>
+    <script type="text/javascript" src="js/footeranim.js"></script>
     <link rel="shortcut icon" href="img/favicon.ico">
 
     
@@ -319,6 +322,83 @@ echo afficheCategorie();
     </form>
     </div>
 </div>
+
+    <div class = "footerBefore" >
+      <a class="dropDeco" href="#" onclick="return false;"><img src="fleche-lign.png" width="45px" height="43px"></a>
+
+    </div>
+    
+    <footer>
+
+    <footer>
+      <div class="row">
+        <div class="margeLeftRight">
+          
+        </div>
+
+        <div class="titleAbove">
+          SUIVEZ NOUS !
+        </div>
+
+        <div class="margeLeftRight">
+          
+        </div>
+      </div>
+
+      <div class="row">
+          
+        
+        <div class="margeLeftRight">
+          
+
+          <div class = "footerAfter" >
+            <a class="dropDecoFacebook" href="#" onclick="return false;"><img src="fleche-lign.png" width="45px" height="43px"></a>
+
+          </div>
+
+
+        </div>
+        <div class="centerFooter row" >
+          
+          <div class="logoFacebook">
+             f 
+
+          
+          </div>
+          <a class="dropDeco" href="https://www.facebook.com/Lidée-recette-143263643108200"> 
+          <div class="logoOverFacebook">
+              f   
+          </div>
+        </a>
+
+          <div class="logoTwitter">
+            <img src="twitterFirst.png" width="40px" height="40px">
+          </div>
+          
+          <a class="dropDeco" href="https://twitter.com/LideeRecette" >
+            <div class="logoOverTwitter">
+              <img src="twitter.png" width ="45px" height="45px"> 
+            </div>
+          </a>
+
+          <div class="logoYoutube">
+            <img src="youtubeFirst.png" width="40px" height="40px">
+          </div>
+
+          <div class="logoOverYoutube">
+            <a class="dropDeco" href="https://www.youtube.com/channel/UCViIUnYaj3XeQrwiBZ-He2Q?view_as=subscriber"><img src="youtube.png" class="pngyoutube" widtrh="55px" height="55px"></a>
+          </div>
+        </div>
+        <div class="margeLeftRight">
+        </div>
+        
+
+      </div>
+      
+    </footer>
+
+
+
     <script>
             // Get the modal
             var modal = document.getElementById('id01');

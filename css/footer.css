@@ -1,0 +1,193 @@
+
+
+body, html{
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	font-family: 'Sniglet', cursive;
+}
+
+body {
+	position: relative;
+}
+a:link{
+	text-decoration: none;
+	color: white;
+}
+#wrap {
+	min-height:100%;
+	position: relative;
+}
+
+.blue {
+	border: 3px solid black;
+	float: left;
+	text-align: center;
+	line-height: 25em;
+	width: 45%;
+	height: 500px;
+	background-color: #CCEEF5;
+}
+
+.red {
+	border: 3px solid black;
+	float: right;
+	text-align: center;
+	line-height: 25em;
+	width: 45%;
+	height: 500px;
+	background-color: #CC620C;
+}
+
+footer {
+	
+	border-top-right-radius: 20px;
+	opacity: 0.9;
+	position: fixed;
+	bottom: 0;
+	background-color: #292829;
+	height: 100px;
+	width: 100%;
+	border-top: 1px solid #616161;
+}
+
+
+.footerAfter {
+
+	text-align: center;	
+	width: 60px;
+	height: 50px;
+	margin-left: 20px;
+	background-color: #FAB329;
+	
+	border-radius: 10px;
+	border: 2px solid black;
+	
+}
+
+.footerBefore {
+
+	text-align: center;	
+	width: 60px;
+	height: 50px;
+	margin-left: 20px;
+	background-color: #FAB329;
+	opacity: 0.9;
+	position: fixed;
+	bottom: 0;
+	border-radius: 10px;
+	border: 2px solid #FBC356;
+
+}
+
+
+img{	margin: 2px 2px 2px 2px;
+}
+
+.logoFacebook {
+	font-size: 40px;
+	color: #3b5998;
+	text-align: center;
+	width : 50px;
+	height: 50px;
+	background-color: white;
+
+	border: 1px solid #3b5998;
+}
+
+.logoOverFacebook {
+	text-decoration: none;
+	font-size: 40px;
+	color: white;
+	text-align: center;
+	width : 50px;
+	height: 50px;
+	background-color: #3b5998;
+	border-radius: 10px;
+	border: 2px solid #3b5998;
+}
+
+
+
+.logoTwitter {
+	background-color: white;
+	width: 50px;
+	height: 50px;
+	border: 2px solid black;
+	margin-left: 20px;
+}
+
+.logoOverTwitter {
+
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border-radius: 10px;
+	margin-left: 20px;
+}
+
+
+.logoYoutube {
+	width: 50px;
+	height: 50px;
+	background-color: white;
+	border: 2px solid red;
+	margin-left: 20px;
+
+}
+
+
+.logoOverYoutube {
+
+	width: 50px;
+	height: 50px;
+	background-color: black;
+	border: 2px solid grey;
+	border-radius: 15px ;
+	margin-left: 20px;
+}
+
+.pngyoutube {
+	color: white;
+	margin: 0px 0px 0px 0px;
+	max-width: 100%;
+	max-height: 100%;
+}
+
+
+.centerFooter {
+	width: 32%;
+	min-width: 200px;
+	height: 60px ;
+	
+
+
+}
+
+.margeLeftRight {
+	min-width: 0px;
+	width: 45%;
+	color: white;
+}
+
+
+.dropDecoFacebook {
+	color: white;
+	text-decoration: none;
+
+}
+
+.dropDecoFacebook:hover {
+	color: white;
+	text-decoration: none;
+
+}
+
+.titleAbove {
+	
+	color: white;
+	font-size: 20px;
+	min-width: 200px;
+	margin-bottom: 5px;
+
+}
