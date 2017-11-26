@@ -203,7 +203,7 @@ Etape 24
 Une part ?');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,0,4,2,3,1,'1
+(null,'http://img-3.journaldesfemmes.com/J7MsBk2LVp_DXvP7sqqd3675XJk=/750x/smart/c67552ec0d884064b2592460687d386c/recipe-jdf/316071.jpg','Millefeuille de la mer','2017-12-11',20,0,4,2,null,1,'1
 Egouttez le crabe. Ouvrez une boîte vide des deux côtés afin de disposer d\'un cercle de 8 cm de diamètre. A l\'aide de ce cercle, découpez deux ronds dans chaque tranche de saumon.
 2
 Récupérez les chutes et hachez-les. Pelez et hachez finement les échalotes. Ciselez les fines herbes.
@@ -213,7 +213,7 @@ Pour finir
 Pour monter les millefeuilles, déposez un rond de saumon au centre des assiettes, posez la boîte évidée dessus, garnissez de crabe puis d\'un autre rond de saumon. Recommencez deux fois. Retirez délicatement la boîte. Gardez au réfrigérateur et servez frais.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/bf85623bd603fa2079b5ccf90178114abf92be2f-tomates-courgettes-oeufs-rapide.jpg','Tomates courgettes oeufs rapide','2017-12-12',30,0,1,null,5,2,'- Laver les légumes 
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/bf85623bd603fa2079b5ccf90178114abf92be2f-tomates-courgettes-oeufs-rapide.jpg','Tomates courgettes oeufs rapide','2017-12-12',30,0,1,1,5,2,'- Laver les légumes 
 - Éplucher la courgette partiellement (faire des "rayures")
 - Couper la courgette en rondelles puis chaques rondelles en quarts
 - Couper les tomates en tranches puis chaques tranches en deux
@@ -231,18 +231,18 @@ INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,diffi
 
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/90912a99f9846421f28eaa19f698310fdc85d861-pates-knackis.jpg','Pâtes & Knackis.','2017-12-11',30,1,2,5,2,2,'1. Faire cuire les fusilli dans l\'eau bouillante salée préalablement.
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/90912a99f9846421f28eaa19f698310fdc85d861-pates-knackis.jpg','Pâtes & Knackis.','2017-12-11',30,1,2,5,5,2,'1. Faire cuire les fusilli dans l\'eau bouillante salée préalablement.
 2. Coupés les saucisses en morceaux et les faire cuire 3min dans la poële, en y ajoutant le sel, le poivres, le parika, le persil et le thym, les poivrons hâchés puis la sauce tomate. Laissez cuire quelques minutes ( 5 à 10 min environ ).
 
 Vous pouvez ajouter du fromage si comme moi il vous est difficile de vous en séparer.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/020652906e4d89e758ceffc82a3821e96e1f651d-gouter-saveur-snickers.jpg','Goûter saveur Snickers','2017-08-11',5,1,2,5,3,3,'Prendre une tranche de pain de mie
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/020652906e4d89e758ceffc82a3821e96e1f651d-gouter-saveur-snickers.jpg','Goûter saveur Snickers','2017-08-11',5,1,2,5,5,3,'Prendre une tranche de pain de mie
 Couvrir une moitié de beurre de cacahuète (BIO parce que c\'est plus sain) et l\'autre de Nutella.
 Plier pour superposer les deux pâtes.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/6f0de50b25dd6cf301e4b8d233ca3824d6660d80-cookies-au-chocolat.jpg','Cookies au chocolat','2017-12-11',30,1,4,null,3,3,'1. Dans un bol, mettre le beurre, puis le ramollir au micro ondes pendant 30 secondes voire une minute selon la puissance de votre micro ondes.
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/6f0de50b25dd6cf301e4b8d233ca3824d6660d80-cookies-au-chocolat.jpg','Cookies au chocolat','2017-12-11',30,1,4,2,null,3,'1. Dans un bol, mettre le beurre, puis le ramollir au micro ondes pendant 30 secondes voire une minute selon la puissance de votre micro ondes.
 
 2. Dans le saladier, mélanger le beurre fondu, le sucre, l\'oeuf (entier) et le sucre vanillé.
 
@@ -257,7 +257,7 @@ INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,diffi
 7. Enfournez pour 10 minutes de cuisson, à 200°C, pas plus. A la sortie, les cookies seront très mous, mais c\'est normal, il faudra attendre une dizaine de minutes et ils seront délicieux une fois refroidis.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/59cf686d1e58b2fa894936cd732ee8cd2ae0a9c3-gratin-de-pates-tres-facile.jpg','Gratin de Pâtes très facile','2017-12-11',30,1,4,5,3,2,'- Préchauffez votre four a 200°C
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/59cf686d1e58b2fa894936cd732ee8cd2ae0a9c3-gratin-de-pates-tres-facile.jpg','Gratin de Pâtes très facile','2017-12-11',30,1,4,5,null,2,'- Préchauffez votre four a 200°C
 
 - Faire bouillir de l\'eau dans une casserole. Quand l\'eau bouillie rajouter un peu d\'huile d\'olive et les pâtes.
 
@@ -275,12 +275,12 @@ INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,diffi
 
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'http://img-3.journaldesfemmes.com/XipfR2GoURyA1DJGklHtNvB7XHc=/750x/smart/a336a8a207c1462da37ee29bea595380/recipe-jdf/402549.jpg','Torsades aux champignons','2017-12-11',30,0,4,null,3,2,'Cuire les pâtes selon les recommandations. 
+(null,'http://img-3.journaldesfemmes.com/XipfR2GoURyA1DJGklHtNvB7XHc=/750x/smart/a336a8a207c1462da37ee29bea595380/recipe-jdf/402549.jpg','Torsades aux champignons','2017-12-11',30,0,4,null,null,2,'Cuire les pâtes selon les recommandations. 
   Émincer les champignons et les faire revenir à feu doux dans du beurre. Ajouter le jambon en dés et faire dorer pendant 5 minutes. 
   Mettre la crème fraîche et laisser frémir quelques minutes. Égoutter les pâtes puis ajouter la préparation (champignons/jambon/crème) le persil et l\'emmental. Bien mélanger.');
 
 INSERT INTO `recette` (id,url_img,titre,date_creation,temps_cuisson,status,difficulte,id_utilisateur,id_categorie,id_type,recette_text)  VALUES
-(null,'https://www.cuisine-etudiant.fr/image/recette/800500/287197000e20f63bed48bbdfbdcdc8e0bb60e198-courgettes-fromage-lardon.jpg','COURGETTES FROMAGE/LARDON','2017-12-11',20,0,4,4,3,2,'1. Couper les courgettes dans la longueur à moitié égales puis creuser les deux moitiés. Réserver la pulpe récupérée.
+(null,'https://www.cuisine-etudiant.fr/image/recette/800500/287197000e20f63bed48bbdfbdcdc8e0bb60e198-courgettes-fromage-lardon.jpg','COURGETTES FROMAGE/LARDON','2017-12-11',20,0,4,1,4,2,'1. Couper les courgettes dans la longueur à moitié égales puis creuser les deux moitiés. Réserver la pulpe récupérée.
 
 2. Faire revenir dans une poêle l\'ail, les lardons et la pulpe de courgettes récupérée précédemment.
 
