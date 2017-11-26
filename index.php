@@ -49,7 +49,8 @@
             </div>   
         </form>     
            
-        <?php if ( isset ($_SESSION['session'])): ?>
+        <?php   if( isset($_SESSION['pseudo'])):?>
+
             <form method="post" class ="col-2 pc" action ='php/deco.php' >
                 <input type="submit" value="Déconnection" class = "btn btn-light" ></input>
             </form>
@@ -140,10 +141,19 @@
 <br>
 
         <nav class="col-12">
-            <button type="button" class="col-3 btn btn-light imgbtn" ><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn" ><img class ="imgbtn" src="1.png"> 
-            <button type="button" class="col-3 btn btn-light imgbtn"><img class ="imgbtn" src="1.png">
+        <?php 
+        if( isset($_SESSION['pseudo'])):?>
+      
+        <button type="button" disp="col-3 btn btn-light imgbtn" id="creerbtnmin"><img class ="imgbtn" src="1.png">
+      <?php else:?>
+         <button type="button" class="col-3 btn btn-light imgbtn" onclick="document.getElementById('id01').style.display='block'" ><img class ="imgbtn" src="1.png">
+      
+         <?php
+        endif;
+        ?>
+           <button type="button" class="col-3 btn btn-light imgbtn" id="recettebtnmin"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn" id="categoriebtnmin"><img class ="imgbtn" src="1.png"> 
+            <button type="button" class="col-3 btn btn-light imgbtn"  id="contactbtnmin"><img class ="imgbtn" src="1.png">
 
 <?php 
   if( isset($_SESSION['pseudo'])):?>

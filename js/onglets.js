@@ -198,4 +198,49 @@ $(function() {
 
         $('#Div_Filtre').show();
     });
+
+    $('#creerbtnmin').click(function(){
+
+        $('#creer').show();
+        $('#categorie').hide();
+        $('#contact').hide();
+        $('#recette').hide();
+
+
+
+    });
+    $('#categoriebtnmin').click(function(){
+
+    
+        $('#creer').hide();
+        $('#categorie').show();
+        $('#contact').hide();
+        $('#recette').hide();
+
+
+
+
+    });
+    $('#contactbtnmin').click(function(){
+
+        $('#creer').hide();
+        $('#categorie').hide();
+        $('#contact').show();
+        $('#recette').hide();
+
+  
+    });
+
+    $('#recettebtnmin').click(function(){
+
+    
+
+        $('#creer').hide();
+        $('#categorie').hide();
+        $('#contact').hide();
+        $('#recette').show();
+
+
+
+    });
 });
