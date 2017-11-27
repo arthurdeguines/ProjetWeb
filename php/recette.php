@@ -7,12 +7,12 @@
   $recette = "";
 if (isset($_GET["cat"])) {
   if($n==1){
-  $req = "Select * from recette where id = 1 LIMIT 0,".$n;
+  $req = "Select * from recette where id = 1 and status=1 LIMIT 0,".$n;
   }else{
-  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." order by tri DESC LIMIT 0,".$n;
+  $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." and status = 1 order by tri DESC LIMIT 0,".$n;
 }
 }else{
-    $req = "Select * from recette where tri <> 0 order by tri DESC LIMIT 0,".$n;
+    $req = "Select * from recette where tri <> 0 and status = 1 order by tri DESC LIMIT 0,".$n;
   }
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {
