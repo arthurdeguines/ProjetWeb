@@ -5,14 +5,17 @@
     $mysqli->set_charset("utf8"); // Résolution des problèmes d'accents   
   require("php/fonctions.php");
   $recette = "";
-if (isset($_GET["cat"])) {
+  if(isset($_GET['rech'])){
+    $req = "Select * from recette where tri <> 0 and status = 1 order by tri DESC LIMIT 0,".$n;
+  }
+elseif (isset($_GET["cat"])) {
   if($n==1){
   $req = "Select * from recette where id = 1 and status=1 LIMIT 0,".$n;
   }else{
   $req = "Select * from recette where tri <> 0 and id_categorie = ".$_GET["cat"]." and status = 1 order by tri DESC LIMIT 0,".$n;
 }
 }else{
-    $req = "Select * from recette where tri <> 0 and status = 1 order by tri DESC LIMIT 0,".$n;
+    $req = "Select * from recette where status = 1 order by tri DESC LIMIT 0,".$n;
   }
     $res = $mysqli->query($req);
         if ($res->num_rows > 0) {

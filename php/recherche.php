@@ -71,5 +71,5 @@ for($i=0;$i<count($stringsearch);$i++){
 }return $coef;
 }
 
- header('Location: http://localhost/ProjetWeb/ProjetWeb/');
+ header('Location: http://localhost/ProjetWeb/ProjetWeb/?rech=1');
 ?>
